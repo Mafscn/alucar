@@ -14,54 +14,66 @@
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Login</title>
+    <title>Alucar</title>
 </head>
 
 <body style="padding-left: 0;">
     <div class="row">
-        <div class="col-3">
-            <div class="nav flex-column" id="nav-tab" role="tablist" aria-orientation="vertical">
+        <div class="d-none d-lg-block col-lg-3">
+            <ul class="nav flex-column" id="nav-tab" role="tablist" aria-orientation="vertical">
                 <!-- Logo -->
-                <a class="navbar-brand">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="images/placeholder-logo.png" style="border-radius: 50%; width: 64px;" alt="logo">
-                        </div>
-                        <div class="col-6">
-                            <div class="container-alucar">
-                                <h1>Alucar</h1>
+                <li class="nav-item">
+                    <a class="navbar-brand">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/placeholder-logo.png" style="border-radius: 50%; width: 64px;" alt="logo">
+                            </div>
+                            <div class="col-6">
+                                <div class="container-alucar">
+                                    <h1>Alucar</h1>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                <div class="btn-container">
+                    </a>
+                </li>
+                <div style="margin-top: 20%;"></div> <!-- Espaçamento --->
+                <li class="nav-item btn-container">
                     <div class="btn-menu"></div>
                     <i class="material-icons">directions_car</i>
                     <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-selected="true">Veículos</a>
-                </div>
-                <div class="btn-container">
+                </li>
+                <li class="nav-item btn-container">
                     <div class="btn-menu"></div>
                     <i class="material-icons">person</i>
                     <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-selected="false">Clientes</a>
-                </div>
-                <div class="btn-container">
+                </li>
+                <li class="nav-item btn-container">
                     <div class="btn-menu"></div>
                     <i class="material-icons">monetization_on</i>
                     <a class="nav-link" id="nav-messages-tab" data-toggle="tab" href="#nav-messages" role="tab" aria-selected="false">Aluguel</a>
-                </div>
-                <div class="btn-container">
+                </li>
+                <div style="margin-top: 55%;"></div> <!-- Espaçamento --->
+                <li class="nav-item btn-container">
                     <div class="btn-menu"></div>
                     <i class="material-icons">settings</i>
                     <a class="nav-link" id="nav-settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-selected="false">Conta</a>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
-        <div class="col-9">
+        <div class="col-sm-12 col-lg-9">
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                <div class="tab-pane fade" id="nav-messages" role="tabpanel" aria-labelledby="nav-messages-tab">...</div>
-                <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">...</div>
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <?php require('veiculos-page.html') ?>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    Clientes
+                </div>
+                <div class="tab-pane fade" id="nav-messages" role="tabpanel" aria-labelledby="nav-messages-tab">
+                    Alugueis
+                </div>
+                <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
+                    Conta
+                </div>
             </div>
         </div>
     </div>

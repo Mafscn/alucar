@@ -5,7 +5,22 @@ html {
 }
 
 body {
-  background-color: #394030;
+  background: rgb(57, 64, 48);
+  background: -moz-linear-gradient(
+    100% 192.92% at 94.53% 0%,
+    rgba(65, 65, 65, 0.8) 0%,
+    #394030 52.81%
+  );
+  background: -webkit-linear-gradient(
+    100% 192.92% at 94.53% 0%,
+    rgba(65, 65, 65, 0.8) 0%,
+    #394030 52.81%
+  );
+  background: radial-gradient(
+    100% 192.92% at 94.53% 0%,
+    rgba(65, 65, 65, 0.8) 0%,
+    #394030 52.81%
+  );
   padding: 5%;
   height: 100%;
   font-family: "Ubuntu Condensed";
@@ -13,10 +28,10 @@ body {
 }
 
 .row,
-.col-3,
-.col-9,
-.col-sm-12,
-.col-lg-6 {
+.col-lg-3,
+.col-lg-6,
+.col-lg-9,
+.col-sm-12 {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -54,12 +69,6 @@ body {
   position: absolute;
   justify-content: left;
 }
-
-/* .container-btns-menu {
-  position: relative;
-  margin-top: 30%;
-  text-align: left;
-} */
 
 /* === Campos de Input === */
 .form-control::placeholder {
@@ -121,7 +130,8 @@ body {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  padding: 3% 0 3% 5%;
+  padding-left: 24%;
+  text-align: left;
 }
 
 .btn-container:hover .btn-menu {
@@ -142,12 +152,13 @@ body {
 }
 
 i.material-icons {
-  padding-left: 13%;
+  padding-right: 7%;
   font-size: 3rem;
   color: white;
 }
 
 .btn-container a {
+  width: 100%;
   font-size: 2rem;
   color: white;
 }
@@ -162,11 +173,4 @@ i.material-icons {
   position: absolute;
   top: 20%;
   left: 10%;
-}
-
-/* === Mobile === */
-@media screen and (max-width: 960px) {
-  .container-car-imgs {
-    display: none;
-  }
 }
