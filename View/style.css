@@ -46,14 +46,10 @@ body {
   margin-bottom: 7%;
 }
 
-.container-img-logo {
-  padding: 0;
-  text-align: end;
-}
-
 .container-alucar {
+  padding-top: 0.375rem;
+  padding-left: 1.5rem;
   display: flex;
-  justify-content: left;
   height: 100%;
   align-items: center;
 }
@@ -130,7 +126,7 @@ body {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  padding-left: 24%;
+  padding-left: 22%;
   text-align: left;
 }
 

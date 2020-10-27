@@ -25,13 +25,9 @@
                 <li class="nav-item">
                     <a class="navbar-brand">
                         <div class="row">
-                            <div class="col-6">
-                                <img src="images/placeholder-logo.png" style="border-radius: 50%; width: 64px;" alt="logo">
-                            </div>
-                            <div class="col-6">
-                                <div class="container-alucar">
-                                    <h1>Alucar</h1>
-                                </div>
+                            <img src="images/placeholder-logo.png" style="border-radius: 50%; width: 64px;" alt="logo">
+                            <div class="container-alucar">
+                                <h1>Alucar</h1>
                             </div>
                         </div>
                     </a>
