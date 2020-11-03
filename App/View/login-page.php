@@ -45,10 +45,10 @@
                     <a href="menu-page.php" class="btn btn-grande" role="button">Entrar</a>
                 </div>
                 <div class="form-group">
-                    <a href="cadastro-page.html" class="btn btn-pequeno" role="button">Criar uma Conta</a>
+                    <a href="cadastro-page.php" class="btn btn-pequeno" role="button">Criar uma Conta</a>
                 </div>
                 <div class="form-group">
-                    <a href="recuperar-page.html" class="btn btn-pequeno" role="button">Recuperar Conta</a>
+                    <a href="recuperar-page.php" class="btn btn-pequeno" role="button">Recuperar Conta</a>
                 </div>
             </form>
         </div>
