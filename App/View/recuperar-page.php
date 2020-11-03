@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="container-btn-voltar">
-                            <a href="login-page.html">
+                            <a href="login-page.php">
                                 <i class="material-icons btn">arrow_back</i>
                             </a>
                         </div>
