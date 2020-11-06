@@ -11,46 +11,46 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Recuperar</title>
+    <title>Login</title>
 </head>
 
 <body>
     <div class="row">
         <div class="col-sm-12 col-lg-6">
             <!-- Logo -->
-            <div class="container-cabecalho">
+            <div class="container-logo">
                 <div class="row">
                     <div class="col-6">
-                        <div class="container-btn-voltar">
-                            <a href="login-page.php">
-                                <i class="material-icons btn">arrow_back</i>
-                            </a>
+                        <div class="container-img-logo">
+                            <img class="img-fluid" src="images/placeholder-logo.png"
+                                style="border-radius: 50%; width: 110px;" alt="logo">
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="container-titulo">
-                            <h1>Recuperar</h1>
+                        <div class="container-alucar">
+                            <h1>Alucar</h1>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Campos -->
-            <div style="margin-top: 25%;">
-                <form class="signin-form">
-                    <div class="form-group">
-                        <input type="email" class="form-control form-campo" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <a href="login-page.html" class="btn btn-grande" role="button"
-                            onclick="alert('Um e-mail foi enviado para você contendo as instruções para recuperar a sua conta!')">
-                            Recuperar
-                        </a>
-                    </div>
-                </form>
-            </div>
+            <form class="signin-form">
+                <div class="form-group">
+                    <input type="email" class="form-control form-campo" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control form-campo" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <a href="page-menu.php" class="btn btn-grande" role="button">Entrar</a>
+                </div>
+                <div class="form-group">
+                    <a href="page-cadastro.php" class="btn btn-pequeno" role="button">Criar uma Conta</a>
+                </div>
+                <div class="form-group">
+                    <a href="page-recuperar.php" class="btn btn-pequeno" role="button">Recuperar Conta</a>
+                </div>
+            </form>
         </div>
 
         <!-- imagem a esquerda -->

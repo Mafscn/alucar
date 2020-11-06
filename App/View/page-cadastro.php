@@ -11,24 +11,28 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <title>Login</title>
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Cadastro</title>
 </head>
 
 <body>
     <div class="row">
         <div class="col-sm-12 col-lg-6">
             <!-- Logo -->
-            <div class="container-logo">
+            <div class="container-cabecalho">
                 <div class="row">
                     <div class="col-6">
-                        <div class="container-img-logo">
-                            <img class="img-fluid" src="images/placeholder-logo.png"
-                                style="border-radius: 50%; width: 110px;" alt="logo">
+                        <div class="container-btn-voltar">
+                            <a href="page-login.php">
+                                <i class="material-icons btn">arrow_back</i>
+                            </a>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="container-alucar">
-                            <h1>Alucar</h1>
+                        <div class="container-titulo" style="text-align: end;">
+                            <h1>Cadastro</h1>
                         </div>
                     </div>
                 </div>
@@ -36,19 +40,22 @@
             <!-- Campos -->
             <form class="signin-form">
                 <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Nome">
+                </div>
+                <div class="form-group">
                     <input type="email" class="form-control form-campo" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control form-campo" placeholder="Password">
+                    <input type="text" class="form-control form-campo" placeholder="Data de Nascimento">
                 </div>
                 <div class="form-group">
-                    <a href="menu-page.php" class="btn btn-grande" role="button">Entrar</a>
+                    <input type="text" class="form-control form-campo" placeholder="CPF">
                 </div>
                 <div class="form-group">
-                    <a href="cadastro-page.php" class="btn btn-pequeno" role="button">Criar uma Conta</a>
+                    <input type="password" class="form-control form-campo" placeholder="Senha">
                 </div>
                 <div class="form-group">
-                    <a href="recuperar-page.php" class="btn btn-pequeno" role="button">Recuperar Conta</a>
+                    <a href="#" class="btn btn-grande" role="button">Cadastrar</a>
                 </div>
             </form>
         </div>

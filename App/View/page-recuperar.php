@@ -14,7 +14,7 @@
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Cadastro</title>
+    <title>Recuperar</title>
 </head>
 
 <body>
@@ -25,39 +25,32 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="container-btn-voltar">
-                            <a href="login-page.php">
+                            <a href="page-login.php">
                                 <i class="material-icons btn">arrow_back</i>
                             </a>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="container-titulo" style="text-align: end;">
-                            <h1>Cadastro</h1>
+                        <div class="container-titulo">
+                            <h1>Recuperar</h1>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Campos -->
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Nome">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control form-campo" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Data de Nascimento">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="CPF">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control form-campo" placeholder="Senha">
-                </div>
-                <div class="form-group">
-                    <a href="#" class="btn btn-grande" role="button">Cadastrar</a>
-                </div>
-            </form>
+            <div style="margin-top: 25%;">
+                <form class="signin-form">
+                    <div class="form-group">
+                        <input type="email" class="form-control form-campo" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <a href="page-login.html" class="btn btn-grande" role="button"
+                            onclick="alert('Um e-mail foi enviado para você contendo as instruções para recuperar a sua conta!')">
+                            Recuperar
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
 
         <!-- imagem a esquerda -->
