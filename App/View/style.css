@@ -1,9 +1,4 @@
 /* === Padrões === */
-html {
-  overflow: hidden;
-  height: 100%;
-}
-
 body {
   background: rgb(57, 64, 48);
   background: -moz-linear-gradient(

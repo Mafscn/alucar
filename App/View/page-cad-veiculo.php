@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="container-btn-voltar">
-                    <a href="login-page.php">
+                    <a href="page-menu.php">
                         <i class="material-icons btn">arrow_back</i>
                     </a>
                 </div>
@@ -32,6 +32,77 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <form class="signin-form">
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Modelo">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Placa">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Cor">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Marca">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Ano">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Câmbio">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Ocupantes">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Portas">
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <form class="signin-form">
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="L. do Porta-Malas">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Quilometragem">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Autonomia">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Data de Inspeçãp">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Banco">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Combustível">
+                </div>
+                <div class="form-group">
+                    <label>Ar-Condicionado</label>
+                    <input type="checkbox" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Trava Elétrica</label>
+                    <input type="checkbox" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Direção Hidráulica</label>
+                    <input type="checkbox" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Airbag</label>
+                    <input type="checkbox" class="form-control">
+                </div>
+            </form>
+        </div>
+        <form class="signin-form">
+            <a href="#" class="btn btn-grande" role="button">Confirmar</a>
+        </form>
     </div>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
