@@ -16,11 +16,31 @@
 </head>
 
 <body>
-    <!-- Logo -->
-    <div class="form-group">
-        <a href="page-cad-veiculo.php" class="btn btn-grande" role="button">Cadastrar Veículo</a>
-    </div>
-    </form>
+    <a href="page-cad-veiculo.php" class="btn btn-grande" role="button">Cadastrar Veículo</a>
+    <table class="table table-sm table-light table-hover">
+        <thead>
+            <tr>
+                <th scope="col">"Marca do carro"</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">"Carro"</th>
+                <td>Ano</td>
+                <td>Placa</td>
+                <td>
+                    <a href="page-ficha-veiculo.php">
+                        <i class="material-icons" style="color: darkgoldenrod">edit</i>
+                    </a>
+                </td>
+                <td>
+                    <button>
+                        <i class="material-icons" style="color: darkred">delete</i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

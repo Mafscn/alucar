@@ -19,16 +19,16 @@
     <!-- Logo -->
     <div class="container-cabecalho">
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <div class="container-btn-voltar">
                     <a href="page-menu.php">
                         <i class="material-icons btn">arrow_back</i>
                     </a>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-4">
                 <div class="container-titulo" style="text-align: end;">
-                    <h1>Cadastrar Veículo</h1>
+                    <h1>Ficha Veículo</h1>
                 </div>
             </div>
         </div>
@@ -102,6 +102,7 @@
         </div>
         <form class="signin-form">
             <a href="#" class="btn btn-grande" role="button">Confirmar</a>
+            <a href="#" class="btn btn-grande" role="button">Excluir</a>
         </form>
     </div>
 
