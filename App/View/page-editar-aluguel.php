@@ -13,12 +13,11 @@
 
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Alucar</title>
 </head>
 
-<body style="padding-left: 0;">
-    <div>
+<body>
+    <!-- Logo -->
+    <div class="container-cabecalho">
         <div class="row">
             <div class="col-6">
                 <div class="container-btn-voltar">
@@ -29,23 +28,50 @@
             </div>
             <div class="col-6">
                 <div class="container-titulo" style="text-align: end;">
-                    <h1>Alterar Senha</h1>
+                    <h1>Editar Aluguel</h1>
                 </div>
             </div>
         </div>
     </div>
     <form class="signin-form">
         <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Senha Atual">
+            <label>Cliente</label>
+            <input type="text" class="form-control form-campo" placeholder="Cliente">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Nova Senha">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Confirmar Nova Senha">
+            <label>Veículo</label>
+            <input type="email" class="form-control form-campo" placeholder="Veículo">
         </div>
     </form>
-    <a href="page-conta.php" class="btn btn-grande" role="button">Confirmar</a>
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <form class="signin-form">
+                <div class="form-group">
+                    <label>Data de Saída</label>
+                    <input type="text" class="form-control form-campo" placeholder="Data de Saída">
+                </div>
+                <div class="form-group">
+                    <label>Horário de Saída</label>
+                    <input type="text" class="form-control form-campo" placeholder="Horário de Saída">
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <form class="signin-form">
+                <div class="form-group">
+                    <label>Dia de Retorno</label>
+                    <input type="text" class="form-control form-campo" placeholder="Data de Retorno">
+                </div>
+                <div class="form-group">
+                    <label>Horário de Retorno</label>
+                    <input type="text" class="form-control form-campo" placeholder="Horário de Retorno">
+                </div>
+            </form>
+        </div>
+        <form class="signin-form">
+            <a href="#" class="btn btn-grande" role="button">Confirmar</a>
+        </form>
+    </div>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

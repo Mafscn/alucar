@@ -18,7 +18,7 @@
 </head>
 
 <body style="padding-left: 0;">
-    <div class="Alterar Dados">
+    <div>
         <div class="row">
             <div class="col-6">
                 <div class="container-btn-voltar">

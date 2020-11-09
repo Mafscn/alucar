@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <!-- Logo -->
     <div class="container-cabecalho">
         <div class="row">
             <div class="col-6">
@@ -33,40 +32,51 @@
             </div>
         </div>
     </div>
-    <form class="signin-form">
-        <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Cliente">
-        </div>
-        <div class="form-group">
-            <input type="email" class="form-control form-campo" placeholder="Veículo">
-        </div>
-    </form>
     <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Data de Saída">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Horário de Saída">
-                </div>
-            </form>
+        <div class="col-3">
+            <label>Cliente</label>
         </div>
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Data de Retorno">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Horário de Retorno">
-                </div>
-            </form>
+        <div class="col-9">
+            <label>"nome"</label>
         </div>
-        <form class="signin-form">
-            <a href="#" class="btn btn-grande" role="button">Confirmar</a>
-            <a href="#" class="btn btn-grande" role="button">Excluir</a>
-        </form>
     </div>
+    <div class="row">
+        <div class="col-3">
+            <label>Veículo</label>
+        </div>
+        <div class="col-9">
+            <label>"veiculo"</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label>Placa</label>
+        </div>
+        <div class="col-9">
+            <label>"numero"</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label>Saída</label>
+        </div>
+        <div class="col-9">
+            <label>"hora"</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label>Retorno</label>
+        </div>
+        <div class="col-9">
+            <label>"data"</label>
+        </div>
+    </div>
+    <form class="signin-form">
+        <a href="page-editar-aluguel.php" class="btn btn-grande" role="button">Editar</a>
+        <a href="page-registrar-ocorrencia.php" class="btn btn-grande" role="button">Registrar Ocorrência</a>
+        <a href="#" class="btn btn-grande" role="button">Excluir</a>
+    </form>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

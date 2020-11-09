@@ -13,12 +13,10 @@
 
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Alucar</title>
 </head>
 
-<body style="padding-left: 0;">
-    <div>
+<body>
+    <div class="container-cabecalho">
         <div class="row">
             <div class="col-6">
                 <div class="container-btn-voltar">
@@ -29,23 +27,34 @@
             </div>
             <div class="col-6">
                 <div class="container-titulo" style="text-align: end;">
-                    <h1>Alterar Senha</h1>
+                    <h1>Registrar Ocorrência</h1>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-3">
+            <label>Cliente</label>
+        </div>
+        <div class="col-9">
+            <label>"nome"</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label>Veículo e Placa</label>
+        </div>
+        <div class="col-9">
+            <label>"veiculo", "placa"</label>
+        </div>
+    </div>
     <form class="signin-form">
-        <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Senha Atual">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Nova Senha">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Confirmar Nova Senha">
-        </div>
+        <input type="text" placeholder="Tipo de Ocorrência">
+        <br>
+        <input type="text" placeholder="Detalhes da Ocorrência...">
+        <br>
+        <a href="#" class="btn btn-grande" role="button">Confirmar</a>
     </form>
-    <a href="page-conta.php" class="btn btn-grande" role="button">Confirmar</a>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
