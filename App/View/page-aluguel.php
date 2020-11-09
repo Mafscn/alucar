@@ -18,7 +18,7 @@
 <body>
     <!-- Logo -->
     <div class="form-group">
-        <a href="page-cad-cliente.php" class="btn btn-grande" role="button">Cadastrar Cliente</a>
+        <a href="page-cad-aluguel.php" class="btn btn-grande" role="button">Cadastrar Aluguel</a>
     </div>
     </form>
 

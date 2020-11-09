@@ -28,7 +28,7 @@
             </div>
             <div class="col-6">
                 <div class="container-titulo" style="text-align: end;">
-                    <h1>Cadastro</h1>
+                    <h1>Cadastrar Veículo</h1>
                 </div>
             </div>
         </div>

@@ -28,43 +28,37 @@
             </div>
             <div class="col-6">
                 <div class="container-titulo" style="text-align: end;">
-                    <h1>Cadastrar Cliente</h1>
+                    <h1>Cadastrar Aluguel</h1>
                 </div>
             </div>
         </div>
     </div>
     <form class="signin-form">
         <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Nome">
+            <input type="text" class="form-control form-campo" placeholder="Cliente">
         </div>
         <div class="form-group">
-            <input type="email" class="form-control form-campo" placeholder="E-mail">
+            <input type="email" class="form-control form-campo" placeholder="Veículo">
         </div>
     </form>
     <div class="row">
         <div class="col-sm-12 col-lg-6">
             <form class="signin-form">
                 <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="CPF">
+                    <input type="text" class="form-control form-campo" placeholder="Data de Saída">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="CNH">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Rua">
+                    <input type="text" class="form-control form-campo" placeholder="Horário de Saída">
                 </div>
             </form>
         </div>
         <div class="col-sm-12 col-lg-6">
             <form class="signin-form">
                 <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Número da casa">
+                    <input type="text" class="form-control form-campo" placeholder="Data de Retorno">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Complemento">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Bairro">
+                    <input type="text" class="form-control form-campo" placeholder="Horário de Retorno">
                 </div>
             </form>
         </div>

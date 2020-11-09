@@ -65,7 +65,7 @@
                     <?php require('page-clientes.php') ?>
                 </div>
                 <div class="tab-pane fade" id="nav-messages" role="tabpanel" aria-labelledby="nav-messages-tab">
-                    <?php require('page-veiculos.php') ?>
+                    <?php require('page-aluguel.php') ?>
                 </div>
                 <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
                     <?php require('page-veiculos.php') ?>
