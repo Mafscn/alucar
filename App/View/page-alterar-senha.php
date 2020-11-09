@@ -18,28 +18,34 @@
 </head>
 
 <body style="padding-left: 0;">
-    <div>
-        <img style="height: 64px;" src="https://chapmanworld.com/wp-content/uploads/2015/02/pacman.png" alt="Imagem Perfil">
-    </div>
-    <div class="row">
-        <div class="col-6">
-            <label>Nome</label><br>
-            <label>"nome"</label>
-            <br>
-            <label>E-mail</label><br>
-            <label>"email"</label>
-        </div>
-        <div class="col-6">
-            <label>Data de nascimento</label><br>
-            <label>"Data de nascimento"</label>
-            <br>
-            <label>CPF</label><br>
-            <label>"CPF"</label>
+    <div class="Alterar Dados">
+        <div class="row">
+            <div class="col-6">
+                <div class="container-btn-voltar">
+                    <a href="page-menu.php">
+                        <i class="material-icons btn">arrow_back</i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="container-titulo" style="text-align: end;">
+                    <h1>Alterar Senha</h1>
+                </div>
+            </div>
         </div>
     </div>
-    <a href="page-alterar-dados.php" class="btn btn-grande" role="button">Alterar Dados</a>
-    <a href="page-alterar-senha.php" class="btn btn-grande" role="button">Alterar Senha</a>
-    <a href="#" class="btn btn-grande" role="button">Sair da Conta</a>
+    <form class="signin-form">
+        <div class="form-group">
+            <input type="text" class="form-control form-campo" placeholder="Senha Atual">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-campo" placeholder="Nova Senha">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-campo" placeholder="Confirmar Nova Senha">
+        </div>
+    </form>
+    <a href="page-conta.php" class="btn btn-grande" role="button">Confirmar</a>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

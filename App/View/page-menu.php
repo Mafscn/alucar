@@ -68,7 +68,7 @@
                     <?php require('page-aluguel.php') ?>
                 </div>
                 <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
-                    <?php require('page-veiculos.php') ?>
+                    <?php require('page-conta.php') ?>
                 </div>
             </div>
         </div>

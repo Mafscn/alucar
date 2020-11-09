@@ -18,28 +18,48 @@
 </head>
 
 <body style="padding-left: 0;">
+    <div class="Alterar Dados">
+        <div class="row">
+            <div class="col-6">
+                <div class="container-btn-voltar">
+                    <a href="page-menu.php">
+                        <i class="material-icons btn">arrow_back</i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="container-titulo" style="text-align: end;">
+                    <h1>Cadastrar Aluguel</h1>
+                </div>
+            </div>
+        </div>
+    </div>
     <div>
         <img style="height: 64px;" src="https://chapmanworld.com/wp-content/uploads/2015/02/pacman.png" alt="Imagem Perfil">
     </div>
     <div class="row">
         <div class="col-6">
-            <label>Nome</label><br>
-            <label>"nome"</label>
-            <br>
-            <label>E-mail</label><br>
-            <label>"email"</label>
+            <form class="signin-form">
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="E-mail">
+                </div>
+            </form>
         </div>
         <div class="col-6">
-            <label>Data de nascimento</label><br>
-            <label>"Data de nascimento"</label>
-            <br>
-            <label>CPF</label><br>
-            <label>"CPF"</label>
+            <form class="signin-form">
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="Data de nascimento">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-campo" placeholder="CPF">
+                </div>
+            </form>
         </div>
     </div>
-    <a href="page-alterar-dados.php" class="btn btn-grande" role="button">Alterar Dados</a>
-    <a href="page-alterar-senha.php" class="btn btn-grande" role="button">Alterar Senha</a>
-    <a href="#" class="btn btn-grande" role="button">Sair da Conta</a>
+    <a href="page-conta.php" class="btn btn-grande" role="button">Confirmar</a>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
