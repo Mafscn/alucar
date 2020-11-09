@@ -62,13 +62,13 @@
                     <?php require('page-veiculos.php') ?>
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    Clientes
+                    <?php require('page-clientes.php') ?>
                 </div>
                 <div class="tab-pane fade" id="nav-messages" role="tabpanel" aria-labelledby="nav-messages-tab">
-                    Alugueis
+                    <?php require('page-veiculos.php') ?>
                 </div>
                 <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
-                    Conta
+                    <?php require('page-veiculos.php') ?>
                 </div>
             </div>
         </div>
