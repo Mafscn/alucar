@@ -16,30 +16,38 @@
 </head>
 
 <body>
-    <a href="page-cad-aluguel.php" class="btn btn-grande" role="button">Cadastrar Aluguel</a>
-    <table class="table table-sm table-light table-hover">
-        <thead>
-            <tr>
-                <th scope="col">"Data"</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">"Nome"</th>
-                <td>"Data"</td>
-                <td>
-                    <a href="page-ficha-aluguel.php">
-                        <i class="material-icons" style="color: darkgoldenrod">edit</i>
-                    </a>
-                </td>
-                <td>
-                    <button>
-                        <i class="material-icons" style="color: darkred">delete</i>
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-2">
+            <?php include('menu-bar.php'); ?>
+        </div>
+        <div class="col-10">
+            <a href="page-cad-aluguel.php" class="btn btn-grande" role="button">Cadastrar Aluguel</a>
+            <table class="table table-sm table-light table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">"Data"</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">"Nome"</th>
+                        <td>"Data"</td>
+                        <td>
+                            <a href="page-ficha-aluguel.php">
+                                <i class="material-icons" style="color: darkgoldenrod">edit</i>
+                            </a>
+                        </td>
+                        <td>
+                            <button>
+                                <i class="material-icons" style="color: darkred">delete</i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

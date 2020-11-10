@@ -13,38 +13,36 @@
 
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Alucar</title>
 </head>
 
 <body>
     <div class="row">
-        <div class="col-2">
-            <?php include('menu-bar.php'); ?>
+        <img src="images/placeholder-logo.png" style="border-radius: 50%; width: 64px;" alt="logo">
+        <div class="container-alucar">
+            <h1>Alucar</h1>
         </div>
-        <div class="col-10">
-            <a href="page-cad-cliente.php" class="btn btn-grande" role="button">Cadastrar Cliente</a>
-            <table class="table table-sm table-light table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">"Clientes"</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">"Nome"</th>
-                        <td>
-                            <a href="page-ficha-cliente.php">
-                                <i class="material-icons" style="color: darkgoldenrod">edit</i>
-                            </a>
-                        </td>
-                        <td>
-                            <button>
-                                <i class="material-icons" style="color: darkred">delete</i>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    </div>
+    <div class="row">
+        <div class="btn-menu"></div>
+        <i class="material-icons">directions_car</i>
+        <a href="page-veiculos.php">Veículos</a>
+    </div>
+    <div class="row">
+        <div class="btn-menu"></div>
+        <i class="material-icons">person</i>
+        <a href="page-clientes.php">Clientes</a>
+    </div>
+    <div class="row">
+        <div class="btn-menu"></div>
+        <i class="material-icons">monetization_on</i>
+        <a href="page-aluguel.php">Aluguel</a>
+    </div>
+    <div class="row">
+        <div class="btn-menu"></div>
+        <i class="material-icons">settings</i>
+        <a href="page-conta.php">Conta</a>
     </div>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
