@@ -33,46 +33,67 @@
             </div>
         </div>
     </div>
-    <form class="signin-form">
-        <div class="form-group">
-            <input type="text" class="form-control form-campo" placeholder="Nome">
-        </div>
-        <div class="form-group">
-            <input type="email" class="form-control form-campo" placeholder="E-mail">
-        </div>
-    </form>
     <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="CPF">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="CNH">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Rua">
-                </div>
-            </form>
+        <div class="col">
+            <label>E-mail</label>
         </div>
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Número da casa">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Complemento">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Bairro">
-                </div>
-            </form>
+        <div class="col">
+            <label>"email"</label>
         </div>
-        <form class="signin-form">
-            <a href="#" class="btn btn-grande" role="button">Confirmar</a>
-            <a href="#" class="btn btn-grande" role="button">Excluir</a>
-        </form>
     </div>
+    <div class="row">
+        <div class="col">
+            <label>CPF</label>
+        </div>
+        <div class="col">
+            <label>"cpf"</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>CNH</label>
+        </div>
+        <div class="col">
+            <label>"cnh"</label>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <label>Logradouro</label>
+        </div>
+        <div class="col">
+            <label>"logradouro"</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>Número</label>
+        </div>
+        <div class="col">
+            <label>"numero"</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>Complemento</label>
+        </div>
+        <div class="col">
+            <label>"complemento"</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>Bairro</label>
+        </div>
+        <div class="col">
+            <label>"bairro"</label>
+        </div>
+    </div>
+    <form class="signin-form">
+        <a href="page-editar-cliente.php" class="btn btn-grande" role="button">Editar</a>
+        <a href="#" class="btn btn-grande" role="button">Excluir</a>
+    </form>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
