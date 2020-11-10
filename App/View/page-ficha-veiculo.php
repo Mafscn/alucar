@@ -34,77 +34,75 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Modelo">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Placa">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Cor">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Marca">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Ano">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Câmbio">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Ocupantes">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Portas">
-                </div>
-            </form>
+        <div class="col">
+            <Label>Cor</Label><br>
+            <Label>"cor"</Label>
         </div>
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="L. do Porta-Malas">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Quilometragem">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Autonomia">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Data de Inspeção">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Banco">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Combustível">
-                </div>
-                <div class="form-group">
-                    <label>Ar-Condicionado</label>
-                    <input type="checkbox" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Trava Elétrica</label>
-                    <input type="checkbox" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Direção Hidráulica</label>
-                    <input type="checkbox" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Airbag</label>
-                    <input type="checkbox" class="form-control">
-                </div>
-            </form>
+        <div class="col">
+            <Label>Câmbio</Label><br>
+            <Label>"cambio"</Label>
         </div>
-        <form class="signin-form">
-            <a href="#" class="btn btn-grande" role="button">Confirmar</a>
-            <a href="#" class="btn btn-grande" role="button">Excluir</a>
-        </form>
+        <div class="col">
+            <Label>Banco</Label><br>
+            <Label>"banco"</Label>
+        </div>
+        <div class="col">
+            <Label>Combustível</Label><br>
+            <Label>"combustivel"</Label>
+        </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <Label>Ocupantes</Label><br>
+            <Label>"ocupantes"</Label>
+        </div>
+        <div class="col">
+            <Label>Portas</Label><br>
+            <Label>"portas"</Label>
+        </div>
+        <div class="col">
+            <Label>Autonomia</Label><br>
+            <Label>"autonomia"</Label>
+        </div>
+        <div class="col">
+            <Label>Quilometragem</Label><br>
+            <Label>"quilometragem"</Label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <Label>Litros do Porta-Malas</Label><br>
+            <Label>"L. porta-malas"</Label>
+        </div>
+        <div class="col">
+            <Label>Data de Inspeção</Label><br>
+            <Label>"data"</Label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <Label>Ar-Condicionado</Label>
+            <i class="material-icons btn">check_circle_outline</i>
+        </div>
+        <div class="col">
+            <Label>Trava Elétrica</Label>
+            <i class="material-icons btn">check_circle_outline</i>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <Label>Direção Hidráulica</Label>
+            <i class="material-icons btn">check_circle_outline</i>
+        </div>
+        <div class="col">
+            <Label>Airbag</Label>
+            <i class="material-icons btn">check_circle_outline</i>
+        </div>
+    </div>
+    <form class="signin-form">
+        <a href="page-editar-veiculo.php" class="btn btn-grande" role="button">Editar</a>
+        <a href="#" class="btn btn-grande" role="button">Excluir</a>
+    </form>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
