@@ -42,7 +42,7 @@
                     <input type="password" class="form-control form-campo" placeholder="Password">
                 </div>
                 <div class="form-group">
-                    <a href="page-menu.php" class="btn btn-grande" role="button">Entrar</a>
+                    <a href="page-aluguel.php" class="btn btn-grande" role="button">Entrar</a>
                 </div>
                 <div class="form-group">
                     <a href="page-cadastro.php" class="btn btn-pequeno" role="button">Criar uma Conta</a>
