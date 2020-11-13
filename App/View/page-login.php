@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./App/View/bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./App/View/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./App/View/style.css">
+    <link rel="stylesheet" href="assets/style.css">
 
     <title>Login</title>
 </head>
