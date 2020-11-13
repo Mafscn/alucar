@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./App/View/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./App/View/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./App/View/style.css">
 
     <title>Login</title>
 </head>
@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="container-img-logo">
-                            <img class="img-fluid" src="images/placeholder-logo.png"
+                            <img class="img-fluid" src="./App/View/images/placeholder-logo.png"
                                 style="border-radius: 50%; width: 110px;" alt="logo">
                         </div>
                     </div>
@@ -56,7 +56,7 @@
         <!-- imagem a esquerda -->
         <div class="col-lg-6">
             <div class="container-car-imgs">
-                <img src="images/placeholder-car1.png" alt="carro" style="width: 850px;">
+                <img src="./App/View/images/placeholder-car1.png" alt="carro" style="width: 850px;">
             </div>
         </div>
     </div>
