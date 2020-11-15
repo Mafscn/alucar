@@ -1,4 +1,17 @@
-/* === Padrões === */
+/* ===== Padrões ===== */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.auto {
+  width: auto;
+  height: auto;
+}
+
 body {
   background: rgb(57, 64, 48);
   background: -moz-linear-gradient(
@@ -16,99 +29,83 @@ body {
     rgba(65, 65, 65, 0.8) 0%,
     #394030 52.81%
   );
-  padding: 5%;
   font-family: "Ubuntu Condensed";
+  font-weight: 300;
   color: white;
-}
-
-.row,
-.col-lg-3,
-.col-lg-6,
-.col-lg-9,
-.col-sm-12 {
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
 
-.container-logo {
-  margin: 7% 0;
-}
-
-.container-cabecalho {
-  margin-bottom: 7%;
-}
-
-.container-alucar {
-  padding-top: 0.375rem;
-  padding-left: 1.5rem;
+.row {
   display: flex;
-  height: 100%;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-}
-
-.container-titulo {
-  padding-top: 0.375rem;
-  padding-right: 0.8rem;
   height: 100%;
-  align-items: center;
 }
 
-.container-btn-voltar {
-  position: absolute;
-  justify-content: left;
+.align-up {
+  height: auto;
+  padding-top: 3%;
+  align-items: flex-start;
 }
 
-/* === Campos de Input === */
-.form-control::placeholder {
+.fixed {
+  position: fixed;
+  width: 20%;
+}
+
+/* === Campos === */
+::placeholder {
+  font-family: "Ubuntu Condensed";
   color: #5c8c14;
   opacity: 1;
 }
 
 .form-campo {
-  margin: auto;
-  padding: 1.6rem;
+  padding: 1rem;
   border: none;
-  border-radius: 28px;
-  width: 90%;
+  border-radius: 32px;
+  width: 80%;
+  font-family: "Ubuntu Condensed";
   font-size: 1.3rem;
+  color: #5c8c14;
   transition: 0.25s;
 }
 
-.form-campo:focus,
-.form-campo:hover {
-  width: 100%;
-  color: #5c8c14;
+.form-campo:hover,
+.form-campo:focus {
+  width: 85%;
 }
 
 /* === Botões === */
-.btn {
-  transition: 0.25s;
-  cursor: pointer;
+a {
+  align-content: center;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-bg,
+.btn-sm {
+  display: inline-block;
   color: white;
   font-size: 1.5rem;
+  transition: 0.25s;
 }
 
-.btn-pequeno {
-  margin: 0;
-  padding: 0;
-  border: none;
+.btn-bg:hover,
+.btn-sm:hover {
+  transform: scale(1.3);
+  color: #5c8c14;
 }
 
-.btn-grande {
-  margin: 1rem 0;
+.btn-bg {
   padding: 0.5rem 3rem;
   border-radius: 28px;
   background-color: white;
   color: #5c8c14;
 }
 
-.btn:hover {
-  transform: scaleX(1.2) scaleY(1.3);
-  color: #5c8c14;
-}
-
-.btn-grande:hover {
+.btn-bg:hover {
   background-color: #5c8c14;
   color: white;
 }
@@ -128,6 +125,17 @@ body {
   background-color: white;
 }
 
+.btn-container a {
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+}
+
+.btn-container:hover i,
+.btn-container:hover a {
+  color: #5c8c14;
+}
+
 .btn-menu {
   position: absolute;
   top: 0;
@@ -140,26 +148,148 @@ body {
   opacity: 1;
 }
 
-i.material-icons {
-  padding-right: 7%;
+.menu {
+  margin: 4% 12% 4% 0;
   font-size: 3rem;
   color: white;
 }
 
-.btn-container a {
-  width: 100%;
-  font-size: 2rem;
-  color: white;
+/* === Cabeçalho === */
+.container-cabecalho {
+  padding: 0 7%;
+  font-size: 3rem;
+  text-align: end;
 }
 
-.btn-container:hover i,
-.btn-container:hover a {
+.container-btn-voltar {
+  display: inline-flex;
+  text-align: start;
+  transition: 0.25s;
+}
+
+.container-btn-voltar:hover {
+  transform: scale(1.3);
+}
+
+.btn-voltar {
+  transform: translateY(18%);
+  transition: 0.25s;
+}
+
+.btn-voltar:hover {
   color: #5c8c14;
 }
 
-/* === imagem a esquerda === */
-.container-car-imgs {
-  position: absolute;
-  top: 20%;
-  left: 10%;
+/* ===== Log ===== */
+/* === Logo == */
+.container-img-logo {
+  position: relative;
+  transform: translateX(-5%);
+  text-align: right;
+}
+
+.img-logo {
+  width: 110px;
+}
+
+.container-alucar {
+  display: flex;
+  padding-left: 5%;
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: left;
+}
+
+/* === Imagem Lateral === */
+.container-car-img {
+  transform: translate(0, 10%);
+  overflow: hidden;
+}
+
+/* ===== Abas ===== */
+/* === Table === */
+table {
+  margin: auto;
+  padding: 2.8% 2% 0 3.2%;
+  width: 90%;
+  background-color: white;
+  border-radius: 28px;
+  color: black;
+  text-align: right;
+  align-content: center;
+}
+
+th {
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+td {
+  display: inline;
+  margin: 0 1%;
+  font-size: 1.4rem;
+  color: #5c8c14;
+}
+
+.btn-del {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* ===== Responsividade ===== */
+/* === Desktop === */
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* === Mobile === */
+@media only screen and (max-width: 1024px) {
+  /* === Padrão === */
+  .col-sm {
+    width: 100%;
+  }
+
+  /* === Imagem Lateral === */
+  .d-none {
+    display: none;
+  }
+
+  /* === Tables === */
+  table {
+    width: 90%;
+  }
 }
