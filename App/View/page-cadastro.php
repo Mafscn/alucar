@@ -24,6 +24,7 @@
                     <div class="col-11">
                         <label>Cadastro</label>
                     </div>
+                    <div class="col-1"></div>
                 </div>
             </div>
             <div style="height: 2rem;"></div>
