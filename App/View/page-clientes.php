@@ -17,7 +17,7 @@
         <div class="col-sm col-9">
             <a href="page-cad-cliente.php" class="btn-bg" role="button">Cadastrar Cliente</a>
             <div style="height: 2rem;"></div>
-            <table>
+            <table class="tabela-menu">
                 <?
                     for($i = 0; $i < 15; $i++) {
                         echo '

@@ -109,6 +109,7 @@ a {
 }
 
 .btn-bg {
+  margin: 3%;
   padding: 0.5rem 3rem;
   border-radius: 28px;
   background-color: white;
@@ -123,7 +124,6 @@ a {
 .btn-container {
   position: relative;
   display: flex;
-  border-radius: 0 36px 36px 0;
   align-items: center;
   width: 100%;
   overflow: hidden;
@@ -157,6 +157,7 @@ a {
   transform: translateX(-100%);
   transition: all 0.25s;
   opacity: 1;
+  border-radius: 0 36px 36px 0;
 }
 
 .menu {
@@ -218,27 +219,26 @@ a {
 }
 
 /* ===== Abas ===== */
-/* === Table === */
-table {
+/* Tabela Menus */
+.tabela-menu {
   margin: auto;
   padding: 2.8% 2% 0 3.2%;
   width: 90%;
   background-color: white;
   border-radius: 28px;
+  font-size: 1.4rem;
   color: black;
   text-align: right;
   align-content: center;
 }
 
-th {
+.tabela-menu th {
   text-align: left;
-  font-size: 1.4rem;
 }
 
-td {
+.tabela-menu td {
   display: inline;
   margin: 0 1%;
-  font-size: 1.4rem;
   color: #5c8c14;
 }
 
@@ -246,6 +246,23 @@ td {
   border: none;
   background-color: white;
   cursor: pointer;
+}
+
+/* Fichas */
+.tabela-ficha {
+  text-align: left;
+  margin: auto;
+  width: 80%;
+  font-size: 1.4rem;
+}
+
+.tabela-ficha th {
+  color: #89CA28;
+  font-weight: 300;
+}
+
+.tabela-ficha td {
+  text-align: right;
 }
 
 /* ===== Responsividade ===== */

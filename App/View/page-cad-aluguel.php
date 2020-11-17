@@ -24,7 +24,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-11">
+                    <div class="col-10">
                         <label>Cadastrar Veículo</label>
                     </div>
                     <div class="col-1"></div>
