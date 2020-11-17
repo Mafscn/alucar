@@ -1,130 +1,159 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="auto">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Logo -->
-    <div class="container-cabecalho">
-        <div class="row">
-            <div class="col-4">
-                <div class="container-btn-voltar">
-                    <a href="page-menu.php">
-                        <i class="material-icons btn">arrow_back</i>
-                    </a>
+<body class="auto">
+    <div class="row align-up">
+        <div class="d-none col-3">
+            <? include('widgets/menu-bar.php'); ?>
+        </div>
+        <div class="col-sm col-9">
+            <div style="height: 24px;"></div>
+            <div class="container-cabecalho">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="container-btn-voltar">
+                            <a href="page-veiculos.php">
+                                <i class="material-icons btn-voltar" style="font-size: 3rem;">arrow_back</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-11">
+                        <label>Editar Veículo</label>
+                    </div>
+                    <div class="col-1"></div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="container-titulo" style="text-align: end;">
-                    <h1>Editar Veículo</h1>
+            <div style="height: 48px;"></div>
+            <div class="row align-up">
+                <div class="col-sm col-6 align-right">
+                    <form autocomplete="off">
+                        <div class="header-campo" style="transform: translateX(5%);">
+                            <label>Modelo</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Modelo">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">
+                            <label>Placa</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Placa">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">
+                            <label>Cor</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Cor">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">
+                            <label>Marca</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Marca">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">
+                            <label>Ano</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Ano">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">
+                            <label>Câmbio</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Câmbio">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">
+                            <label>Ocupantes</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Ocupantes">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">
+                            <label>Portas</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Portas">
+                    </form>
+                </div>
+                <div class="col-sm col-6 align-left">
+                    <form autocomplete="off">
+                        <div class="header-campo" style="transform: translateX(-6%);">
+                            <label>Portas</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="L. do Porta-Malas">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(-6%);">
+                            <label>Portas</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Quilometragem">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(-6%);">
+                            <label>Portas</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Autonomia">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(-6%);">
+                            <label>Portas</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Data de Inspeção">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(-6%);">
+                            <label>Portas</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Banco">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(-6%);">
+                            <label>Portas</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Combustível">
+                        <div style="height: 16px;"></div>
+
+                        <div style="height: 16px;"></div>
+
+                        <input type="checkbox">
+                        <div class="side-header-campo">
+                            <label>Ar-Condicionado</label>
+                        </div>
+                        <div style="height: 16px;"></div>
+
+                        <input type="checkbox">
+                        <div class="side-header-campo">
+                            <label>Trava Elétrica</label>
+                        </div>
+                        <div style="height: 16px;"></div>
+
+                        <input type="checkbox">
+                        <div class="side-header-campo">
+                            <label>Direção Hidráulica</label>
+                        </div>
+                        <div style="height: 16px;"></div>
+
+                        <input type="checkbox">
+                        <div class="side-header-campo">
+                            <label>Airbag</label>
+                        </div>
+                    </form>
                 </div>
             </div>
+            <div style="height: 48px;"></div>
+            <form autocomplete="off">
+                <a href="page-veiculos.php" class="btn-bg" role="button">Confirmar</a>
+            </form>
+            <div style="height: 48px;"></div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <label>Modelo</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Modelo">
-                </div>
-                <div class="form-group">
-                    <label>Placa</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Placa">
-                </div>
-                <div class="form-group">
-                    <label>Cor</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Cor">
-                </div>
-                <div class="form-group">
-                    <label>Marca</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Marca">
-                </div>
-                <div class="form-group">
-                    <label>Ano</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Ano">
-                </div>
-                <div class="form-group">
-                    <label>Câmbio</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Câmbio">
-                </div>
-                <div class="form-group">
-                    <label>Ocupantes</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Ocupantes">
-                </div>
-                <div class="form-group">
-                    <label>Portas</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Portas">
-                </div>
-            </form>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <label>L. do Porta-Malas</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="L. do Porta-Malas">
-                </div>
-                <div class="form-group">
-                    <label>Quilometragem</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Quilometragem">
-                </div>
-                <div class="form-group">
-                    <label>Autonomia</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Autonomia">
-                </div>
-                <div class="form-group">
-                    <label>Data da Inspeção</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Data de Inspeção">
-                </div>
-                <div class="form-group">
-                    <label>Banco</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Banco">
-                </div>
-                <div class="form-group">
-                    <label>Combustível</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Combustível">
-                </div>
-                <div class="form-group">
-                    <label>Ar-Condicionado</label>
-                    <input type="checkbox" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Trava Elétrica</label>
-                    <input type="checkbox" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Direção Hidráulica</label>
-                    <input type="checkbox" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Airbag</label>
-                    <input type="checkbox" class="form-control">
-                </div>
-            </form>
-        </div>
-        <form class="signin-form">
-            <a href="#" class="btn btn-grande" role="button">Confirmar</a>
-            <a href="#" class="btn btn-grande" role="button">Excluir</a>
-        </form>
-    </div>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

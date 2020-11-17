@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="col-10">
-                        <label>Cadastrar Veículo</label>
+                        <label>Cadastrar Aluguel</label>
                     </div>
                     <div class="col-1"></div>
                 </div>

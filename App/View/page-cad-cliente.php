@@ -44,12 +44,12 @@
                         <div style="height: 16px;"></div>
                         <input type="text" class="form-campo" placeholder="CNH">
                         <div style="height: 16px;"></div>
-                        <input type="text" class="form-campo" placeholder="Rua">
+                        <input type="text" class="form-campo" placeholder="Logradouro">
                     </form>
                 </div>
                 <div class="col-sm col-6 align-left">
                     <form autocomplete="off">
-                        <input type="text" class="form-campo" placeholder="Número da casa">
+                        <input type="text" class="form-campo" placeholder="Número">
                         <div style="height: 16px;"></div>
                         <input type="text" class="form-campo" placeholder="Complemento">
                         <div style="height: 16px;"></div>

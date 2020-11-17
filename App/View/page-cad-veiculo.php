@@ -65,17 +65,29 @@
                         <div style="height: 16px;"></div>
                         <input type="text" class="form-campo" placeholder="Combustível">
                         <div style="height: 16px;"></div>
-                        <label>Ar-Condicionado</label>
+
                         <input type="checkbox" class="form-checkbox">
+                        <div class="side-header-campo">
+                            <label>Ar-Condicionado</label>
+                        </div>
                         <div style="height: 16px;"></div>
-                        <label>Trava Elétrica</label>
+
                         <input type="checkbox" class="form-checkbox">
+                        <div class="side-header-campo">
+                            <label>Trava Elétrica</label>
+                        </div>
                         <div style="height: 16px;"></div>
-                        <label>Direção Hidráulica</label>
+
                         <input type="checkbox" class="form-checkbox">
+                        <div class="side-header-campo">
+                            <label>Direção Hidráulica</label>
+                        </div>
                         <div style="height: 16px;"></div>
-                        <label>Airbag</label>
+
                         <input type="checkbox" class="form-checkbox">
+                        <div class="side-header-campo">
+                            <label>Airbag</label>
+                        </div>
                     </form>
                 </div>
             </div>

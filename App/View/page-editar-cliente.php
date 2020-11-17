@@ -1,92 +1,81 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="auto">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Logo -->
-    <div class="container-cabecalho">
-        <div class="row">
-            <div class="col-6">
-                <div class="container-btn-voltar">
-                    <a href="page-menu.php">
-                        <i class="material-icons btn">arrow_back</i>
-                    </a>
+<body class="auto">
+    <div class="row align-up">
+        <div class="d-none col-3">
+            <? include('widgets/menu-bar.php'); ?>
+        </div>
+        <div class="col-sm col-9">
+            <div style="height: 24px;"></div>
+            <div class="container-cabecalho">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="container-btn-voltar">
+                            <a href="page-clientes.php">
+                                <i class="material-icons btn-voltar" style="font-size: 3rem;">arrow_back</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-11">
+                        <label>Editar Cliente</label>
+                    </div>
+                    <div class="col-1"></div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="container-titulo" style="text-align: end;">
-                    <h1>Editar Cliente</h1>
+            <div style="height: 48px;"></div>
+            <form autocomplete="off">
+                <div class="header-campo">Nome</div>
+                <input type="text" class="form-campo" placeholder="Nome">
+                <div style="height: 16px;"></div>
+
+                <div class="header-campo">E-mail</div>
+                <input type="email" class="form-campo" placeholder="E-mail">
+                <div style="height: 16px;"></div>
+            </form>
+            <div class="row">
+                <div class="col-sm col-6 align-right">
+                    <form autocomplete="off">
+                        <div class="header-campo" style="transform: translateX(5%);">CPF</div>
+                        <input type="text" class="form-campo" placeholder="CPF">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">CNH</div>
+                        <input type="text" class="form-campo" placeholder="CNH">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(5%);">Logradouro</div>
+                        <input type="text" class="form-campo" placeholder="Logradouro">
+                    </form>
+                </div>
+                <div class="col-sm col-6 align-left">
+                    <form autocomplete="off">
+                    <div class="header-campo" style="transform: translateX(-6%);">Número</div>
+                        <input type="text" class="form-campo" placeholder="Número">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(-6%);">Complemento</div>
+                        <input type="text" class="form-campo" placeholder="Complemento">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(-6%);">Bairro</div>
+                        <input type="text" class="form-campo" placeholder="Bairro">
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
-    <form class="signin-form">
-        <div class="form-group">
-            <label>Nome</label><br>
-            <input type="text" class="form-control form-campo" placeholder="Nome">
-        </div>
-        <div class="form-group">
-            <label>E-mail</label><br>
-            <input type="email" class="form-control form-campo" placeholder="E-mail">
-        </div>
-    </form>
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <label>CPF</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="CPF">
-                </div>
-                <div class="form-group">
-                    <label>CNH</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="CNH">
-                </div>
-                <div class="form-group">
-                    <label>Logradouro</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Logradouro">
-                </div>
+            <div style="height: 32px;"></div>
+            <form>
+                <a href="page-clientes.php" class="btn-bg" role="button">Confirmar</a>
             </form>
         </div>
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <label>Número</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Número">
-                </div>
-                <div class="form-group">
-                    <label>Complemento</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Complemento">
-                </div>
-                <div class="form-group">
-                    <label>Bairro</label><br>
-                    <input type="text" class="form-control form-campo" placeholder="Bairro">
-                </div>
-            </form>
-        </div>
-        <form class="signin-form">
-            <a href="#" class="btn btn-grande" role="button">Confirmar</a>
-            <a href="#" class="btn btn-grande" role="button">Excluir</a>
-        </form>
     </div>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

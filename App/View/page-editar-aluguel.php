@@ -2,82 +2,85 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Logo -->
-    <div class="container-cabecalho">
-        <div class="row">
-            <div class="col-6">
-                <div class="container-btn-voltar">
-                    <a href="page-menu.php">
-                        <i class="material-icons btn">arrow_back</i>
-                    </a>
+    <div class="row align-up">
+        <div class="d-none col-3">
+            <? include('widgets/menu-bar.php'); ?>
+        </div>
+        <div class="col-sm col-9">
+            <div style="height: 24px;"></div>
+            <div class="container-cabecalho">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="container-btn-voltar">
+                            <a href="page-aluguel.php">
+                                <i class="material-icons btn-voltar" style="font-size: 3rem;">arrow_back</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <label>Editar Aluguel</label>
+                    </div>
+                    <div class="col-1"></div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="container-titulo" style="text-align: end;">
-                    <h1>Editar Aluguel</h1>
+            <div style="height: 48px;"></div>
+            <form autocomplete="off">
+                <div class="header-campo">
+                    <label>Cliente</label>
+                </div>
+                <input type="text" class="form-campo" placeholder="Cliente">
+                <div style="height: 16px;"></div>
+
+                <div class="header-campo">
+                    <label>Veículo</label>
+                </div>
+                <input type="email" class="form-campo" placeholder="Veículo">
+                <div style="height: 16px;"></div>
+            </form>
+            <div class="row">
+                <div class="col-sm col-6 align-right">
+                    <form autocomplete="off">
+                        <div class="header-campo" style="transform: translateX(8%);">
+                            <label>Data de Saída</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Data de Saída">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(8%);">
+                            <label>Horário de Saída</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Horário de Saída">
+                        <div style="height: 16px;"></div>
+                    </form>
+                </div>
+                <div class="col-sm col-6 align-left">
+                    <form autocomplete="off">
+                        <div class="header-campo" style="transform: translateX(-8%);">
+                            <label>Data de Retorno</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Data de Retorno">
+                        <div style="height: 16px;"></div>
+
+                        <div class="header-campo" style="transform: translateX(-8%);">
+                            <label>Cliente</label>
+                        </div>
+                        <input type="text" class="form-campo" placeholder="Horário de Retorno">
+                        <div style="height: 16px;"></div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
-    <form class="signin-form">
-        <div class="form-group">
-            <label>Cliente</label>
-            <input type="text" class="form-control form-campo" placeholder="Cliente">
-        </div>
-        <div class="form-group">
-            <label>Veículo</label>
-            <input type="email" class="form-control form-campo" placeholder="Veículo">
-        </div>
-    </form>
-    <div class="row">
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <label>Data de Saída</label>
-                    <input type="text" class="form-control form-campo" placeholder="Data de Saída">
-                </div>
-                <div class="form-group">
-                    <label>Horário de Saída</label>
-                    <input type="text" class="form-control form-campo" placeholder="Horário de Saída">
-                </div>
+            <form>
+                <a href="page-aluguel.php" class="btn-bg" role="button">Confirmar</a>
             </form>
         </div>
-        <div class="col-sm-12 col-lg-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <label>Dia de Retorno</label>
-                    <input type="text" class="form-control form-campo" placeholder="Data de Retorno">
-                </div>
-                <div class="form-group">
-                    <label>Horário de Retorno</label>
-                    <input type="text" class="form-control form-campo" placeholder="Horário de Retorno">
-                </div>
-            </form>
-        </div>
-        <form class="signin-form">
-            <a href="#" class="btn btn-grande" role="button">Confirmar</a>
-        </form>
     </div>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
