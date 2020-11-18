@@ -11,12 +11,9 @@
 
 <body class="auto">
     <div class="row align-up">
-        <div class="d-none col-3">
-            <?php include('widgets/menu-bar.php'); ?>
-        </div>
+        <? include('widgets/menu-bar.php'); ?>
         <div class="col-sm col-9">
             <a href="page-cad-veiculo.php" class="btn-bg" role="button">Cadastrar Veículo</a>
-            <div style="height: 2rem;"></div>
             <table class="tabela-menu">
                 <? 
                     for($i = 0; $i < 15; $i++) {
@@ -43,7 +40,6 @@
                     };
                 ?>
             </table>
-            <div style="height: 3rem"></div>
         </div>
     </div>
 </body>

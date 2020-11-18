@@ -21,16 +21,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-11">
-                        <label>Recuperar</label>
-                    </div>
+                    <div class="col-10">Recuperar</div>
+                    <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div style="height: 2rem;"></div>
             <form autocomplete="off">
                 <input type="email" class="form-campo" placeholder="Email">
-                <div style="height: 1.5rem;"></div>
-                <a href="page-login.php" class="btn-bg" role="button" onclick="alert('Um e-mail foi enviado para você contendo as instruções para recuperar a sua conta!')">
+                <a href="page-login.php" class="btn-bg" role="button" onclick="alert('Um e-mail foi enviado para você!')">
                     Recuperar
                 </a>
             </form>
