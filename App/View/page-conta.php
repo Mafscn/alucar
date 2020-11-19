@@ -11,21 +11,15 @@
 
 <body>
     <div class="row align-up">
-        <div class="d-none col-3">
-            <?php include('widgets/menu-bar.php'); ?>
-        </div>
+        <? include('widgets/menu-bar.php'); ?>
         <div class="col-sm col-9">
-            <div style="height: 24px;"></div>
             <div class="container-cabecalho">
                 <div class="row">
                     <div class="col-1"></div>
-                    <div class="col-11">
-                        <label>Conta</label>
-                    </div>
-                    <div class="col-1"></div>
+                    <div class="col-10">Conta</div>
+                    <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div style="height: 48px;"></div>
             <table class="tabela-ficha">
                 <tr>
                     <th>Nome</th>
@@ -44,7 +38,6 @@
                     <td>"cpf"</td>
                 </tr>
             </table>
-            <div style="height: 48px;"></div>
             <a href="page-alterar-dados.php" class="btn-bg" role="button">Alterar Dados</a>
             <a href="page-alterar-senha.php" class="btn-bg" role="button">Alterar Senha</a>
             <a href="page-login.php" class="btn-bg" role="button">Sair da Conta</a>

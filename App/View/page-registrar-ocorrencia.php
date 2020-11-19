@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Registrar Ocorrência</title>
 </head>
 
 <body>
     <div class="row align-up">
-        <div class="d-none col-3">
-            <? include('widgets/menu-bar.php'); ?>
-        </div>
+        <? include('widgets/menu-bar.php'); ?>
         <div class="col-sm col-9">
-            <div style="height: 24px;"></div>
             <div class="container-cabecalho">
                 <div class="row">
                     <div class="col-1">
@@ -24,13 +22,10 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-11">
-                        <label>Registrar Ocorrência</label>
-                    </div>
-                    <div class="col-1"></div>
+                    <div class="col-10">Registrar Ocorrência</div>
+                    <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div style="height: 48px;"></div>
             <table class="tabela-ficha">
                 <tr>
                     <th>Cliente</th>
@@ -41,7 +36,6 @@
                     <td>"veiculo", "placa"</td>
                 </tr>
             </table>
-            <div style="height: 48px;"></div>
             <form class="signin-form">
                 <input type="text" class="form-campo" placeholder="Tipo de Ocorrência">
                 <div style="height: 48px;"></div>

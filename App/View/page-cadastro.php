@@ -21,24 +21,21 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-11">
-                        <label>Cadastro</label>
-                    </div>
-                    <div class="col-1"></div>
+                    <div class="col-10">Cadastro</div>
+                    <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div style="height: 2rem;"></div>
             <form autocomplete="off">
                 <input type="text" class="form-campo" placeholder="Nome">
-                <div style="height: 1rem;"></div>
+                <br>
                 <input type="email" class="form-campo" placeholder="Email">
-                <div style="height: 1rem;"></div>
+                <br>
                 <input type="text" class="form-campo" placeholder="Data de Nascimento">
-                <div style="height: 1rem;"></div>
+                <br>
                 <input type="text" class="form-campo" placeholder="CPF">
-                <div style="height: 1rem;"></div>
+                <br>
                 <input type="password" class="form-campo" placeholder="Senha">
-                <div style="height: 1.5rem;"></div>
+                <br>
                 <a href="#" class="btn-bg" role="button">Cadastrar</a>
             </form>
         </div>
