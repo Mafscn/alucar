@@ -1,3 +1,8 @@
+<?php
+require_once("../Controller/pdo_login.php");
+session_start();
+?>
+
 <!doctype html>
 <html lang="pt-BR">
 
@@ -27,7 +32,7 @@
                 </tr>
                 <tr>
                     <th>E-mail</th>
-                    <td>"email"</td>
+                    <td><?php echo $_SESSION['email']; ?></td>
                 </tr>
                 <tr>
                     <th>Data de Nascimento</th>
@@ -40,9 +45,21 @@
             </table>
             <a href="page-alterar-dados.php" class="btn-bg" role="button">Alterar Dados</a>
             <a href="page-alterar-senha.php" class="btn-bg" role="button">Alterar Senha</a>
-            <a href="page-login.php" class="btn-bg" role="button">Sair da Conta</a>
+            <form action="" method="POST">
+                <input type="submit" action="" method="POST" class="btn-bg" role="button" name="loggout" value="Sair da conta">
+            </form>
         </div>
     </div>
 </body>
 
 </html>
+
+<?php
+
+if (isset($_POST['loggout'])) {
+    session_destroy();
+    header('Location: index.php');
+    die();
+}
+
+?>

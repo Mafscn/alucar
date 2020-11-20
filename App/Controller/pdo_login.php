@@ -17,10 +17,9 @@ if (isset($_POST['entrar'])) {
         $_SESSION['login'] = true;
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
+    } 
 
-        header('Location: ../View/page-conta.php');
-    } else {
-        header('Location: ../View/page-login.php');
-    }
+    header('Location: ../View/');
+
 } else {
 }
