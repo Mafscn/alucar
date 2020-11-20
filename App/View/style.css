@@ -106,7 +106,8 @@ body {
 }
 
 /* === Botões === */
-a {
+a,
+form input {
   align-content: center;
   text-decoration: none;
   color: white;
@@ -148,7 +149,7 @@ a {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  padding-left: 22%;
+  padding-left: 12%;
   text-align: left;
 }
 
@@ -181,9 +182,10 @@ a {
   border-radius: 0 36px 36px 0;
 }
 
-.menu {
-  margin: 4% 12% 4% 0;
-  font-size: 3rem;
+.menu-btn {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4% 12% 4% 0;
   color: white;
 }
 
@@ -224,7 +226,7 @@ input[type="checkbox"] {
 /* === Logo === */
 .container-img-logo {
   position: relative;
-  transform: translateX(-5%);
+  transform: translateX(-7px);
   text-align: right;
 }
 
@@ -234,7 +236,7 @@ input[type="checkbox"] {
 
 .container-alucar {
   display: flex;
-  padding-left: 5%;
+  padding-left: 10px;
   font-weight: 300;
   font-size: 3rem;
   text-align: left;
@@ -332,16 +334,51 @@ input[type="checkbox"] {
   width: 100%;
 }
 
+.menu-bar-mobile {
+  display: none;
+}
+
 /* === Mobile === */
 @media only screen and (max-width: 1024px) {
-  /* === Padrão === */
   .col-sm {
     width: 100%;
   }
 
-  /* === Imagem Lateral === */
   .d-none {
     display: none;
+  }
+
+  .menu-bar-mobile {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #394030;
+  }
+
+  .btn-container {
+    padding: 0;
+    text-align: center;
+  }
+
+  .btn-menu-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    z-index: -1;
+    transition: 0.25s;
+    border-radius: 50%;
+  }
+  
+  .btn-container:hover .btn-menu-mobile {
+    width: 64px;
+    height: 64px;
+    background-color: white;
   }
 
   /* === Tables === */
