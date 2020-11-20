@@ -12,10 +12,10 @@
     <div class="row">
         <div class="col-sm col-6">
             <? require("widgets/alucar-logo.php"); ?>
-            <form autocomplete="off">
-                <input type="email" class="form-campo" placeholder="Email">
-                <input type="password" class="form-campo" placeholder="Password">
-                <a href="page-aluguel.php" class="btn-bg" role="button">Entrar</a>
+            <form autocomplete="off" action="../Controller/pdo_login.php" method="POST">
+                <input type="email" class="form-campo" placeholder="Email" name="email">
+                <input type="password" class="form-campo" placeholder="Password" name="password">
+                <input type="submit" class="btn-bg" role="button" name="entrar" value="Entrar">
                 <br>
                 <a href="page-cadastro.php" class="btn-sm" role="button">Criar uma Conta</a>
                 <br>
