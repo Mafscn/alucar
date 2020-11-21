@@ -1,6 +1,7 @@
 <?php
 require_once("../Controller/pdo_login.php");
 session_start();
+
 ?>
 
 <!doctype html>
@@ -28,7 +29,7 @@ session_start();
             <table class="tabela-ficha">
                 <tr>
                     <th>Nome</th>
-                    <td>"nome"</td>
+                    <td><?php echo $_SESSION['nome']; ?></td>
                 </tr>
                 <tr>
                     <th>E-mail</th>
@@ -40,7 +41,7 @@ session_start();
                 </tr>
                 <tr>
                     <th>CPF</th>
-                    <td>"cpf"</td>
+                    <td><?php echo $_SESSION['cpf']; ?></td>
                 </tr>
             </table>
             <a href="page-alterar-dados.php" class="btn-bg" role="button">Alterar Dados</a>

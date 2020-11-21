@@ -1,3 +1,9 @@
+<?php
+require_once("../Controller/pdo_login.php");
+session_start();
+
+?>
+
 <!doctype html>
 <html lang="pt-BR">
 
@@ -22,15 +28,21 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-10">Alterar Dados</div>
+                    <div class="col-10">Alterar Dados</div><input class="btn-bg" type="submit" name="editar" value="Editar" onclick="(function(){
+                        document.getElementById('nome').disabled = false;
+                        document.getElementById('email').disabled = false;
+                        document.getElementById('nascimento').disabled = false;
+                        document.getElementById('cpf').disabled = false;
+                        console.log('deu certo');
+                    })()">
                     <div class="d-none col-1"></div>
                 </div>
             </div>
             <form autocomplete="off">
-                <input type="text" class="form-campo" placeholder="Nome">
-                <input type="text" class="form-campo" placeholder="E-mail">
-                <input type="text" class="form-campo" placeholder="Data de nascimento">
-                <input type="text" class="form-campo" placeholder="CPF">
+                <input type="text" class="form-campo" value="<?php echo $_SESSION['nome']; ?>" id="nome" disabled>
+                <input type="text" class="form-campo" placeholder="E-mail" value="<?php echo $_SESSION['email']; ?>" id="email" disabled>
+                <input type="text" class="form-campo" placeholder="Data de nascimento" value="#emconstrução" id="nascimento" disabled style="color: red !important;">
+                <input type="text" class="form-campo" placeholder="CPF" value="<?php echo $_SESSION['cpf']; ?>" id="cpf" disabled>
             </form>
             <a href="page-conta.php" class="btn-bg" role="button">Confirmar</a>
         </div>
