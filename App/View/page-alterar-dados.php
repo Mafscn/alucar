@@ -1,71 +1,52 @@
+<?php
+require_once("../Controller/pdo_login.php");
+session_start();
+
+?>
+
 <!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Alucar</title>
+    <title>Alterar Dados</title>
 </head>
 
-<body style="padding-left: 0;">
-    <div>
-        <div class="row">
-            <div class="col-6">
-                <div class="container-btn-voltar">
-                    <a href="page-menu.php">
-                        <i class="material-icons btn">arrow_back</i>
-                    </a>
+<body>
+    <div class="row align-up">
+        <? include('widgets/menu-bar.php'); ?>
+        <div class="col-sm col-9">
+            <div class="container-cabecalho">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="container-btn-voltar">
+                            <a href="page-conta.php">
+                                <i class="material-icons btn-voltar" style="font-size: 3rem;">arrow_back</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-10">Alterar Dados</div><input class="btn-bg" type="submit" name="editar" value="Editar" onclick="(function(){
+                        document.getElementById('nome').disabled = false;
+                        document.getElementById('email').disabled = false;
+                        document.getElementById('nascimento').disabled = false;
+                        document.getElementById('cpf').disabled = false;
+                        console.log('deu certo');
+                    })()">
+                    <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="container-titulo" style="text-align: end;">
-                    <h1>Cadastrar Aluguel</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <img style="height: 64px;" src="https://chapmanworld.com/wp-content/uploads/2015/02/pacman.png" alt="Imagem Perfil">
-    </div>
-    <div class="row">
-        <div class="col-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Nome">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="E-mail">
-                </div>
+            <form autocomplete="off">
+                <input type="text" class="form-campo" value="<?php echo $_SESSION['nome']; ?>" id="nome" disabled>
+                <input type="text" class="form-campo" placeholder="E-mail" value="<?php echo $_SESSION['email']; ?>" id="email" disabled>
+                <input type="text" class="form-campo" placeholder="Data de nascimento" value="#emconstrução" id="nascimento" disabled style="color: red !important;">
+                <input type="text" class="form-campo" placeholder="CPF" value="<?php echo $_SESSION['cpf']; ?>" id="cpf" disabled>
             </form>
-        </div>
-        <div class="col-6">
-            <form class="signin-form">
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="Data de nascimento">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control form-campo" placeholder="CPF">
-                </div>
-            </form>
+            <a href="page-conta.php" class="btn-bg" role="button">Confirmar</a>
         </div>
     </div>
-    <a href="page-conta.php" class="btn btn-grande" role="button">Confirmar</a>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

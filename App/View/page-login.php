@@ -2,20 +2,24 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<<<<<<< HEAD
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./App/View/bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./App/View/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
 
+=======
+    <link rel="stylesheet" href="style.css">
+>>>>>>> 1a6b44bc3d768a0f6b492bd4ba45ac27d4fdfefa
     <title>Login</title>
 </head>
 
 <body>
     <div class="row">
+<<<<<<< HEAD
         <div class="col-sm-12 col-lg-6">
             <!-- Logo -->
             <div class="container-logo">
@@ -57,19 +61,26 @@
         <div class="col-lg-6">
             <div class="container-car-imgs">
                 <img src="./App/View/images/placeholder-car1.png" alt="carro" style="width: 850px;">
+=======
+        <div class="col-sm col-6">
+            <? require("widgets/alucar-logo.php"); ?>
+            <form autocomplete="off" action="../Controller/pdo_login.php" method="POST">
+                <input type="email" class="form-campo" placeholder="Email" name="email">
+                <input type="password" class="form-campo" placeholder="Password" name="password">
+                <input type="submit" class="btn-bg" role="button" name="entrar" value="Entrar">
+                <br>
+                <a href="page-cadastro.php" class="btn-sm" role="button">Criar uma Conta</a>
+                <br>
+                <a href="page-recuperar.php" class="btn-sm" role="button">Recuperar Conta</a>
+            </form>
+        </div>
+        <div class="d-none col-6">
+            <div class="container-car-img">
+                <img src="images/placeholder-car1.png" alt="carro">
+>>>>>>> 1a6b44bc3d768a0f6b492bd4ba45ac27d4fdfefa
             </div>
         </div>
     </div>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

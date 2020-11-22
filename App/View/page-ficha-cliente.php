@@ -2,104 +2,66 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Ficha Cliente</title>
 </head>
 
 <body>
-    <!-- Logo -->
-    <div class="container-cabecalho">
-        <div class="row">
-            <div class="col-6">
-                <div class="container-btn-voltar">
-                    <a href="page-menu.php">
-                        <i class="material-icons btn">arrow_back</i>
-                    </a>
+    <div class="row align-up">
+        <? include('widgets/menu-bar.php'); ?>
+        <div class="col-sm col-9">
+            <div class="container-cabecalho">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="container-btn-voltar">
+                            <a href="page-aluguel.php">
+                                <i class="material-icons btn-voltar" style="font-size: 3rem;">arrow_back</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-10">Ficha Cliente</div>
+                    <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="container-titulo" style="text-align: end;">
-                    <h1>Ficha Cliente</h1>
-                </div>
-            </div>
+            <table class="tabela-ficha">
+                <tr>
+                    <th>E-mail</th>
+                    <td>email</td>
+                </tr>
+                <tr>
+                    <th>CPF</th>
+                    <td>cpf</td>
+                </tr>
+                <tr>
+                    <th>CNH</th>
+                    <td>cnh</td>
+                </tr>
+                <tr>
+                    <th>Logradouro</th>
+                    <td>logradouro</td>
+                </tr>
+                <tr>
+                    <th>Número</th>
+                    <td>numero</td>
+                </tr>
+                <tr>
+                    <th>Complemento</th>
+                    <td>complemento</td>
+                </tr>
+                <tr>
+                    <th>Bairro</th>
+                    <td>bairro</td>
+                </tr>
+            </table>
+            <form>
+                <a href="page-editar-cliente.php" class="btn-bg" role="button">Editar</a>
+                <a href="#" class="btn-bg" role="button">Excluir</a>
+            </form>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <label>E-mail</label>
-        </div>
-        <div class="col">
-            <label>"email"</label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label>CPF</label>
-        </div>
-        <div class="col">
-            <label>"cpf"</label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label>CNH</label>
-        </div>
-        <div class="col">
-            <label>"cnh"</label>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col">
-            <label>Logradouro</label>
-        </div>
-        <div class="col">
-            <label>"logradouro"</label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label>Número</label>
-        </div>
-        <div class="col">
-            <label>"numero"</label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label>Complemento</label>
-        </div>
-        <div class="col">
-            <label>"complemento"</label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label>Bairro</label>
-        </div>
-        <div class="col">
-            <label>"bairro"</label>
-        </div>
-    </div>
-    <form class="signin-form">
-        <a href="page-editar-cliente.php" class="btn btn-grande" role="button">Editar</a>
-        <a href="#" class="btn btn-grande" role="button">Excluir</a>
-    </form>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
