@@ -1,6 +1,5 @@
 {
     "conventionalCommits.scopes": [
-        "start",
-        "routes"
+        "start"
     ]
 }
