@@ -352,6 +352,7 @@ input[type="checkbox"] {
     display: flex;
     position: fixed;
     bottom: 0;
+    z-index: 2;
     height: 80px;
     width: 100%;
     justify-content: space-evenly;
