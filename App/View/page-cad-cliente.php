@@ -26,30 +26,32 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <form autocomplete="off">
-                <input type="text" class="form-campo" placeholder="Nome">
-            </form>
-            <div class="row">
-                <div class="col-sm col-6 align-right">
-                    <form autocomplete="off">
-                        <input type="email" class="form-campo" placeholder="E-mail">
-                        <input type="text" class="form-campo" placeholder="CPF">
-                        <input type="text" class="form-campo" placeholder="CNH">
-                        <input type="text" class="form-campo" placeholder="Data de Nascimento">
-                    </form>
+            <div class="centralize">
+                <form autocomplete="off">
+                    <input type="text" class="form-campo" placeholder="Nome">
+                </form>
+                <div class="row">
+                    <div class="col-sm col-6 align-right">
+                        <form autocomplete="off">
+                            <input type="email" class="form-campo" placeholder="E-mail">
+                            <input type="text" class="form-campo" placeholder="CPF">
+                            <input type="text" class="form-campo" placeholder="CNH">
+                            <input type="text" class="form-campo" placeholder="Data de Nascimento">
+                        </form>
+                    </div>
+                    <div class="col-sm col-6 align-left">
+                        <form autocomplete="off">
+                            <input type="text" class="form-campo" placeholder="Logradouro">
+                            <input type="text" class="form-campo" placeholder="Bairro">
+                            <input type="text" class="form-campo" placeholder="Número">
+                            <input type="text" class="form-campo" placeholder="Complemento">
+                        </form>
+                    </div>
                 </div>
-                <div class="col-sm col-6 align-left">
-                    <form autocomplete="off">
-                        <input type="text" class="form-campo" placeholder="Logradouro">
-                        <input type="text" class="form-campo" placeholder="Bairro">
-                        <input type="text" class="form-campo" placeholder="Número">
-                        <input type="text" class="form-campo" placeholder="Complemento">
-                    </form>
-                </div>
+                <form>
+                    <a href="page-clientes.php" class="btn-bg" role="button">Confirmar</a>
+                </form>
             </div>
-            <form>
-                <a href="page-clientes.php" class="btn-bg" role="button">Confirmar</a>
-            </form>
         </div>
     </div>
 </body>

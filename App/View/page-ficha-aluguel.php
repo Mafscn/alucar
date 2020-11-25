@@ -26,33 +26,35 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <table class="tabela-ficha">
-                <tr>
-                    <th>Cliente</th>
-                    <td>"nome"</td>
-                </tr>
-                <tr>
-                    <th>Veículo</th>
-                    <td>"veiculo"</td>
-                </tr>
-                <tr>
-                    <th>Placa</th>
-                    <td>"numero"</td>
-                </tr>
-                <tr>
-                    <th>Saída</th>
-                    <td>"hora"</td>
-                </tr>
-                <tr>
-                    <th>Retorno</th>
-                    <td>"data"</td>
-                </tr>
-            </table>
-            <form>
-                <a href="page-editar-aluguel.php" class="btn-bg" role="button">Editar</a>
-                <a href="page-registrar-ocorrencia.php" class="btn-bg" role="button">Registrar Ocorrência</a>
-                <a href="#" class="btn-bg" role="button">Excluir</a>
-            </form>
+            <div class="centralize">
+                <table class="tabela-ficha">
+                    <tr>
+                        <th>Cliente</th>
+                        <td>"nome"</td>
+                    </tr>
+                    <tr>
+                        <th>Veículo</th>
+                        <td>"veiculo"</td>
+                    </tr>
+                    <tr>
+                        <th>Placa</th>
+                        <td>"numero"</td>
+                    </tr>
+                    <tr>
+                        <th>Saída</th>
+                        <td>"hora"</td>
+                    </tr>
+                    <tr>
+                        <th>Retorno</th>
+                        <td>"data"</td>
+                    </tr>
+                </table>
+                <form>
+                    <a href="page-editar-aluguel.php" class="btn-bg" role="button">Editar</a>
+                    <a href="page-registrar-ocorrencia.php" class="btn-bg" role="button">Registrar Ocorrência</a>
+                    <a href="#" class="btn-bg" role="button">Excluir</a>
+                </form>
+            </div>
         </div>
     </div>
 </body>

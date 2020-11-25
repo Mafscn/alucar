@@ -26,68 +26,70 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <table class="tabela-ficha">
-                <tr>
-                    <th>Cor</th>
-                    <td>cor</td>
-                </tr>
-                <tr>
-                    <th>Câmbio</th>
-                    <td>cambio</td>
-                </tr>
-                <tr>
-                    <th>Banco</th>
-                    <td>banco</td>
-                </tr>
-                <tr>
-                    <th>Combustível</th>
-                    <td>combustivel</td>
-                </tr>
-                <tr>
-                    <th>Ocupantes</th>
-                    <td>ocupantes</td>
-                </tr>
-                <tr>
-                    <th>Portas</th>
-                    <td>portas</td>
-                </tr>
-                <tr>
-                    <th>Autonomia</th>
-                    <td>autonomia</td>
-                </tr>
-                <tr>
-                    <th>Quilometragem</th>
-                    <td>quilometragem</td>
-                </tr>
-                <tr>
-                    <th>Porta-Malas (Litros)</th>
-                    <td>l porta-malas</td>
-                </tr>
-                <tr>
-                    <th>Data de Inspeção</th>
-                    <td>data de inspeção</td>
-                </tr>
-                <tr>
-                    <th>Ar-condicionado</th>
-                    <td><i class="material-icons" style="font-size: 2rem;">check_circle_outline</i></td>
-                </tr>
-                <tr>
-                    <th>Trava Elétrica</th>
-                    <td><i class="material-icons" style="font-size: 2rem;">check_circle_outline</i></td>
-                </tr>
-                <tr>
-                    <th>Direção Hidráulica</th>
-                    <td><i class="material-icons" style="font-size: 2rem;">check_circle_outline</i></td>
-                </tr>
-                <tr>
-                    <th>Airbag</th>
-                    <td><i class="material-icons" style="font-size: 2rem;">check_circle_outline</i></td>
-                </tr>
-            </table>
-            <form>
-                <a href="page-editar-veiculo.php" class="btn-bg" role="button">Editar</a>
-                <a href="#" class="btn-bg" role="button">Excluir</a>
-            </form>
+            <div class="centralize">
+                <table class="tabela-ficha">
+                    <tr>
+                        <th>Cor</th>
+                        <td>cor</td>
+                    </tr>
+                    <tr>
+                        <th>Câmbio</th>
+                        <td>cambio</td>
+                    </tr>
+                    <tr>
+                        <th>Banco</th>
+                        <td>banco</td>
+                    </tr>
+                    <tr>
+                        <th>Combustível</th>
+                        <td>combustivel</td>
+                    </tr>
+                    <tr>
+                        <th>Ocupantes</th>
+                        <td>ocupantes</td>
+                    </tr>
+                    <tr>
+                        <th>Portas</th>
+                        <td>portas</td>
+                    </tr>
+                    <tr>
+                        <th>Autonomia</th>
+                        <td>autonomia</td>
+                    </tr>
+                    <tr>
+                        <th>Quilometragem</th>
+                        <td>quilometragem</td>
+                    </tr>
+                    <tr>
+                        <th>Porta-Malas (Litros)</th>
+                        <td>l porta-malas</td>
+                    </tr>
+                    <tr>
+                        <th>Data de Inspeção</th>
+                        <td>data de inspeção</td>
+                    </tr>
+                    <tr>
+                        <th>Ar-condicionado</th>
+                        <td><i class="material-icons" style="font-size: 2rem;">check_circle_outline</i></td>
+                    </tr>
+                    <tr>
+                        <th>Trava Elétrica</th>
+                        <td><i class="material-icons" style="font-size: 2rem;">check_circle_outline</i></td>
+                    </tr>
+                    <tr>
+                        <th>Direção Hidráulica</th>
+                        <td><i class="material-icons" style="font-size: 2rem;">check_circle_outline</i></td>
+                    </tr>
+                    <tr>
+                        <th>Airbag</th>
+                        <td><i class="material-icons" style="font-size: 2rem;">check_circle_outline</i></td>
+                    </tr>
+                </table>
+                <form>
+                    <a href="page-editar-veiculo.php" class="btn-bg" role="button">Editar</a>
+                    <a href="#" class="btn-bg" role="button">Excluir</a>
+                </form>
+            </div>
         </div>
     </div>
 </body>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Recuperar</title>
+    <title>Recuperar Senha</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-10">Recuperar</div>
+                    <div class="col-10">Recuperar Senha</div>
                     <div class="d-none col-1"></div>
                 </div>
             </div>

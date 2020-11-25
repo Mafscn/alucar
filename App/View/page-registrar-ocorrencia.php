@@ -38,9 +38,7 @@
             </table>
             <form class="signin-form">
                 <input type="text" class="form-campo" placeholder="Tipo de Ocorrência">
-                <div style="height: 48px;"></div>
                 <input type="text" class="form-campo" placeholder="Detalhes da Ocorrência...">
-                <div style="height: 48px;"></div>
                 <a href="#" class="btn-bg" role="button">Confirmar</a>
             </form>
         </div>

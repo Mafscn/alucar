@@ -26,40 +26,42 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <table class="tabela-ficha">
-                <tr>
-                    <th>E-mail</th>
-                    <td>email</td>
-                </tr>
-                <tr>
-                    <th>CPF</th>
-                    <td>cpf</td>
-                </tr>
-                <tr>
-                    <th>Data de Nascimento</th>
-                    <td>Data de Nascimento</td>
-                </tr>
-                <tr>
-                    <th>Bairro</th>
-                    <td>bairro</td>
-                </tr>
-                <tr>
-                    <th>Logradouro</th>
-                    <td>logradouro</td>
-                </tr>
-                <tr>
-                    <th>Número</th>
-                    <td>numero</td>
-                </tr>
-                <tr>
-                    <th>Complemento</th>
-                    <td>complemento</td>
-                </tr>
-            </table>
-            <form>
-                <a href="page-editar-funcionario.php" class="btn-bg" role="button">Editar</a>
-                <a href="#" class="btn-bg" role="button">Excluir</a>
-            </form>
+            <div class="centralize">
+                <table class="tabela-ficha">
+                    <tr>
+                        <th>E-mail</th>
+                        <td>email</td>
+                    </tr>
+                    <tr>
+                        <th>CPF</th>
+                        <td>cpf</td>
+                    </tr>
+                    <tr>
+                        <th>Data de Nascimento</th>
+                        <td>Data de Nascimento</td>
+                    </tr>
+                    <tr>
+                        <th>Bairro</th>
+                        <td>bairro</td>
+                    </tr>
+                    <tr>
+                        <th>Logradouro</th>
+                        <td>logradouro</td>
+                    </tr>
+                    <tr>
+                        <th>Número</th>
+                        <td>numero</td>
+                    </tr>
+                    <tr>
+                        <th>Complemento</th>
+                        <td>complemento</td>
+                    </tr>
+                </table>
+                <form>
+                    <a href="page-editar-funcionario.php" class="btn-bg" role="button">Editar</a>
+                    <a href="#" class="btn-bg" role="button">Excluir</a>
+                </form>
+            </div>
         </div>
     </div>
 </body>

@@ -26,27 +26,29 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <form autocomplete="off">
-                <input type="text" class="form-campo" placeholder="Cliente">
-                <input type="email" class="form-campo" placeholder="Veículo">
-            </form>
-            <div class="row">
-                <div class="col-sm col-6 align-right">
-                    <form autocomplete="off">
-                        <input type="text" class="form-campo" placeholder="Data de Saída">
-                        <input type="text" class="form-campo" placeholder="Horário de Saída">
-                    </form>
+            <div class="centralize">
+                <form autocomplete="off">
+                    <input type="text" class="form-campo" placeholder="Cliente">
+                    <input type="email" class="form-campo" placeholder="Veículo">
+                </form>
+                <div class="row">
+                    <div class="col-sm col-6 align-right">
+                        <form autocomplete="off">
+                            <input type="text" class="form-campo" placeholder="Data de Saída">
+                            <input type="text" class="form-campo" placeholder="Horário de Saída">
+                        </form>
+                    </div>
+                    <div class="col-sm col-6 align-left">
+                        <form autocomplete="off">
+                            <input type="text" class="form-campo" placeholder="Data de Retorno">
+                            <input type="text" class="form-campo" placeholder="Horário de Retorno">
+                        </form>
+                    </div>
                 </div>
-                <div class="col-sm col-6 align-left">
-                    <form autocomplete="off">
-                        <input type="text" class="form-campo" placeholder="Data de Retorno">
-                        <input type="text" class="form-campo" placeholder="Horário de Retorno">
-                    </form>
-                </div>
+                <form>
+                    <a href="page-aluguel.php" class="btn-bg" role="button">Confirmar</a>
+                </form>
             </div>
-            <form>
-                <a href="page-aluguel.php" class="btn-bg" role="button">Confirmar</a>
-            </form>
         </div>
     </div>
 </body>

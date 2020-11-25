@@ -6,11 +6,6 @@ body {
   margin: 0;
 }
 
-.auto {
-  width: auto;
-  height: auto;
-}
-
 body {
   background: rgb(57, 64, 48);
   background: -moz-linear-gradient(
@@ -40,6 +35,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.centralize {
+  max-height: 70vh;
+  overflow-y: scroll;
 }
 
 .align-up {
@@ -107,10 +107,12 @@ body {
 
 /* === Botões === */
 a,
-form input {
+input[type="submit"] {
+  border: none;
+  font-family: "Ubuntu Condensed";
   align-content: center;
   text-decoration: none;
-  color: white;
+  color: #5c8c14;
 }
 
 .btn-bg,
@@ -125,11 +127,11 @@ form input {
   padding: 14px 48px;
   border-radius: 28px;
   background-color: white;
-  color: #5c8c14;
 }
 
 .btn-sm {
   margin: 2%;
+  color: white;
 }
 
 .btn-bg:hover,
@@ -215,6 +217,7 @@ input[type="checkbox"] {
 }
 
 .btn-voltar {
+  color: white;
   transform: translateY(18%);
   transition: 0.25s;
 }
@@ -248,11 +251,10 @@ input[type="checkbox"] {
   overflow: hidden;
 }
 
-/* ===== Abas ===== */
 /* Tabela Menus */
 .tabela-menu {
-  margin: 16px auto 48px auto;
-  padding: 2.8% 2% 0 3.2%;
+  margin: auto;
+  padding: 2.8% 1% 0 3.2%;
   width: 90%;
   background-color: white;
   border-radius: 28px;
@@ -268,7 +270,7 @@ input[type="checkbox"] {
 
 .tabela-menu td {
   display: inline;
-  margin: 0 1%;
+  margin: 0 2%;
   color: #5c8c14;
 }
 

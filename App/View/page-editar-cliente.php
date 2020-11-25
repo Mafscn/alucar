@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" class="auto">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <title>Editar Cliente</title>
 </head>
 
-<body class="auto">
+<body>
     <div class="row align-up">
         <? include('widgets/menu-bar.php'); ?>
         <div class="col-sm col-9">
@@ -26,45 +26,47 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <form autocomplete="off">
-                <div class="header-campo">Nome</div>
-                <input type="text" class="form-campo" placeholder="Nome">
-            </form>
-            <div class="row">
-                <div class="col-sm col-6 align-right">
-                    <form autocomplete="off">
-                        <div class="header-campo" style="transform: translateX(5%);">E-mail</div>
-                        <input type="email" class="form-campo" placeholder="E-mail">
+            <div class="centralize">
+                <form autocomplete="off">
+                    <div class="header-campo">Nome</div>
+                    <input type="text" class="form-campo" placeholder="Nome">
+                </form>
+                <div class="row">
+                    <div class="col-sm col-6 align-right">
+                        <form autocomplete="off">
+                            <div class="header-campo" style="transform: translateX(5%);">E-mail</div>
+                            <input type="email" class="form-campo" placeholder="E-mail">
 
-                        <div class="header-campo" style="transform: translateX(5%);">CPF</div>
-                        <input type="text" class="form-campo" placeholder="CPF">
+                            <div class="header-campo" style="transform: translateX(5%);">CPF</div>
+                            <input type="text" class="form-campo" placeholder="CPF">
 
-                        <div class="header-campo" style="transform: translateX(5%);">CNH</div>
-                        <input type="text" class="form-campo" placeholder="CNH">
+                            <div class="header-campo" style="transform: translateX(5%);">CNH</div>
+                            <input type="text" class="form-campo" placeholder="CNH">
 
-                        <div class="header-campo" style="transform: translateX(5%);">Data de Nascimento</div>
-                        <input type="text" class="form-campo" placeholder="Data de Nascimento">
-                    </form>
+                            <div class="header-campo" style="transform: translateX(5%);">Data de Nascimento</div>
+                            <input type="text" class="form-campo" placeholder="Data de Nascimento">
+                        </form>
+                    </div>
+                    <div class="col-sm col-6 align-left">
+                        <form autocomplete="off">
+                            <div class="header-campo" style="transform: translateX(-6%);">Bairro</div>
+                            <input type="text" class="form-campo" placeholder="Bairro">
+
+                            <div class="header-campo" style="transform: translateX(-6%);">Logradouro</div>
+                            <input type="text" class="form-campo" placeholder="Logradouro">
+
+                            <div class="header-campo" style="transform: translateX(-6%);">Número</div>
+                            <input type="text" class="form-campo" placeholder="Número">
+
+                            <div class="header-campo" style="transform: translateX(-6%);">Complemento</div>
+                            <input type="text" class="form-campo" placeholder="Complemento">
+                        </form>
+                    </div>
                 </div>
-                <div class="col-sm col-6 align-left">
-                    <form autocomplete="off">
-                        <div class="header-campo" style="transform: translateX(-6%);">Bairro</div>
-                        <input type="text" class="form-campo" placeholder="Bairro">
-
-                        <div class="header-campo" style="transform: translateX(-6%);">Logradouro</div>
-                        <input type="text" class="form-campo" placeholder="Logradouro">
-
-                        <div class="header-campo" style="transform: translateX(-6%);">Número</div>
-                        <input type="text" class="form-campo" placeholder="Número">
-
-                        <div class="header-campo" style="transform: translateX(-6%);">Complemento</div>
-                        <input type="text" class="form-campo" placeholder="Complemento">
-                    </form>
-                </div>
+                <form>
+                    <a href="page-clientes.php" class="btn-bg" role="button">Confirmar</a>
+                </form>
             </div>
-            <form>
-                <a href="page-clientes.php" class="btn-bg" role="button">Confirmar</a>
-            </form>
         </div>
     </div>
 </body>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" class="auto">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -9,13 +9,14 @@
     <title>Clientes</title>
 </head>
 
-<body class="auto">
+<body>
     <div class="row align-up">
         <? include('widgets/menu-bar.php'); ?>
         <div class="col-sm col-9">
             <a href="page-cad-cliente.php" class="btn-bg" role="button">Cadastrar Cliente</a>
-            <table class="tabela-menu">
-                <?
+            <div class="centralize">
+                <table class="tabela-menu">
+                    <?
                     for($i = 0; $i < 15; $i++) {
                         echo '
                         <tr>
@@ -36,8 +37,9 @@
                         </tr>
                         ';
                     };
-                ?>
-            </table>
+                    ?>
+                </table>
+            </div>
         </div>
     </div>
 </body>
