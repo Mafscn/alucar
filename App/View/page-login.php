@@ -11,7 +11,7 @@
 <body>
     <div class="row">
         <div class="col-sm col-6">
-            <? require("widgets/alucar-logo.php"); ?>
+            <?php require("widgets/alucar-logo.php"); ?>
             <form autocomplete="off" action="../Controller/pdo_login.php" method="POST">
                 <input type="email" class="form-campo" placeholder="Email" name="email">
                 <input type="password" class="form-campo" placeholder="Password" name="password">

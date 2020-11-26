@@ -1,7 +1,7 @@
 <div class="d-none col-3">
     <div class="fixed">
         <div style="margin-left: 10%;">
-            <? include("widgets/alucar-logo.php") ?>
+            <?php include("widgets/alucar-logo.php") ?>
         </div>
         <div class="btn-container">
             <div class="btn-menu"></div>

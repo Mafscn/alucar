@@ -23,7 +23,6 @@ if (isset($_POST['entrar'])) {
             // Atribui os dados para as variáveis de sessão
             $_SESSION['login'] = true;
             $_SESSION['email'] = $value['email'];
-            $_SESSION['password'] = $value['password'];
             $_SESSION['nome'] = $value['nome'];
             $_SESSION['cpf'] = $value['cpf'];
         }   

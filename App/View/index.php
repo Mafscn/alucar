@@ -9,6 +9,6 @@ if($_SESSION['login'] == false){
     die();
 }else{
     // Caso esteja logado, terá acesso às telas do usuário
-    header('Location: page-conta.php');
+    header('Location: page-aluguel.php');
     die();
 }
