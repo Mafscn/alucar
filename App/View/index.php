@@ -12,3 +12,4 @@ if($_SESSION['login'] == false){
     header('Location: page-conta.php');
     die();
 }
+?>

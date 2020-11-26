@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("../Controller/pdo_login.php");
 session_start();
 ?>

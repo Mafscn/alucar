@@ -25,12 +25,12 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <form autocomplete="off" action="" method="POST">
+            <form autocomplete="off" action="../Controller/pdo_cadastro.php" method="POST">
                 <input type="text" class="form-campo" placeholder="Nome" name="nome" autocomplete="off">
                 <br>
                 <input type="email" class="form-campo" placeholder="Email" name="email" autocomplete="off">
                 <br>
-                <input type="text" class="form-campo" placeholder="Data de Nascimento" name="nascimento" autocomplete="off">
+                <input type="date" class="form-campo" placeholder="Data de Nascimento" name="nascimento" autocomplete="off">
                 <br>
                 <input type="text" class="form-campo" placeholder="CPF" name="cpf" autocomplete="off">
                 <br>

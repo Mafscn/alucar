@@ -11,12 +11,12 @@
 
 <body>
     <div class="row align-up">
-        <? include('widgets/menu-bar.php'); ?>
+        <?php include('widgets/menu-bar.php'); ?>
         <div class="col-sm col-9">
             <a href="page-cad-aluguel.php" class="btn-bg" role="button">Cadastrar Aluguel</a>
             <div class="centralize">
                 <table class="tabela-menu">
-                    <?
+                    <?php
                     for($i = 0; $i < 15; $i++) {
                         echo '
                         <tr>
