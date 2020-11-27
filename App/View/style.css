@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
 html,
 body {
   width: 100%;
@@ -23,7 +25,7 @@ body {
     rgba(65, 65, 65, 0.8) 0%,
     #394030 52.81%
   );
-  font-family: "Ubuntu Condensed";
+  font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 300;
   color: white;
   text-align: center;
