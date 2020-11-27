@@ -52,7 +52,7 @@
                 <form>
                     <a href="page-editar-aluguel.php" class="btn-bg" role="button">Editar</a>
                     <a href="page-registrar-ocorrencia.php" class="btn-bg" role="button">Registrar Ocorrência</a>
-                    <a href="#" class="btn-bg" role="button">Excluir</a>
+                    <a href="#" class="btn-bg btn-red" role="button">Excluir</a>
                 </form>
             </div>
         </div>

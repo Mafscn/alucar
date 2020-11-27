@@ -173,6 +173,10 @@ input[type="submit"] {
   color: #5c8c14;
 }
 
+.btn-red:hover {
+  background-color: #F24130;
+}
+
 .btn-menu {
   position: absolute;
   top: 0;

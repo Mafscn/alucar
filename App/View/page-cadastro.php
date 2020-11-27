@@ -63,7 +63,7 @@ if (isset($_POST['cadastrar']) && isset($_POST['nome']) && isset($_POST['email']
 
     $u = new User();
 
-    $u->Cadastrar($nome, $email, $nascimento, $cpf, $password);
+    //$u->Cadastrar($nome, $email, $nascimento, $cpf, $password);
 
     header('Location: page-login.php');
     die();

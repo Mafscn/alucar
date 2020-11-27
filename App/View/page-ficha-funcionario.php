@@ -59,7 +59,7 @@
                 </table>
                 <form>
                     <a href="page-editar-funcionario.php" class="btn-bg" role="button">Editar</a>
-                    <a href="#" class="btn-bg" role="button">Excluir</a>
+                    <a href="#" class="btn-bg btn-redw" role="button">Excluir</a>
                 </form>
             </div>
         </div>
