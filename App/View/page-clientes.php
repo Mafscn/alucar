@@ -16,7 +16,7 @@
             <a href="page-cad-cliente.php" class="btn-bg" role="button">Cadastrar Cliente</a>
             <div class="centralize">
                 <table class="tabela-menu">
-                    <?
+                    <?php
                     for($i = 0; $i < 15; $i++) {
                         echo '
                         <tr>

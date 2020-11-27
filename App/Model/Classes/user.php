@@ -15,7 +15,7 @@ class User
     {
         global $pdo;
 
-        $sql = $pdo->prepare("SELECT * FROM `usuario` WHERE `email` = ? AND `password` = ?");
+        $sql = $pdo->prepare("SELECT * FROM `conta` WHERE `usuario` = ? AND `senha` = ?");
         $sql->execute(array($email, $password));
         $userInfo = $sql->fetchAll();
 
@@ -32,12 +32,17 @@ class User
     }
 
     // Método para cadastrar o novo usuário no banco de dados
-    public function Cadastrar($nome, $email, $nascimento, $cpf, $password)
+    public function Cadastrar($rand, $nome, $email, $data, $cpf, $senha)
     {
         global $pdo;
 
-        $sql = $pdo->prepare("INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `password`, `cpf`) VALUES (NULL, ?, ?, ?, ?);");
-        $sql->execute(array($nome, $email, $password, $cpf));
+        $tipo = 1;
+        
+        $sql = $pdo->prepare("INSERT INTO `detalhes_conta` (`id`, `idConta`, `nome`, `email`, `dataNasc`, `cpf`, `senha`) VALUES (NULL, ?, ?, ?, ?, ?, ?);");
+        $sql->execute(array($rand, $nome, $email, $data, $cpf, $senha));
+    
+        $sql = $pdo->prepare("INSERT INTO `conta` (`id`, `tipo`, `usuario`, `senha`) VALUES (?, ?, ?, ?);");
+        $sql->execute(array($rand, $tipo, $email, $senha));
     }
 
     public function GetUserData()

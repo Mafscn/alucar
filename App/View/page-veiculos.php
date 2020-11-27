@@ -16,7 +16,7 @@
             <a href="page-cad-veiculo.php" class="btn-bg" role="button">Cadastrar Veículo</a>
             <div class="centralize">
                 <table class="tabela-menu">
-                    <?php 
+                    <?php
                     for($i = 0; $i < 1; $i++) {
                         echo '
                         <tr>

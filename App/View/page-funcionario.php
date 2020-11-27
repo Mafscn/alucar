@@ -16,7 +16,7 @@
             <a href="page-cad-funcionario.php" class="btn-bg" role="button">Cadastrar Funcionário</a>
             <div class="centralize">
                 <table class="tabela-menu">
-                    <?
+                    <?php
                     for($i = 0; $i < 15; $i++) {
                         echo '
                         <tr>
