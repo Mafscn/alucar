@@ -22,7 +22,7 @@ class User
         if ($sql->rowCount() == 1) {
 
             foreach ($userInfo as $key => $value) {
-                $this->id = $value['idConta'];
+                $this->id = $value['id'];
             }
 
             return true;
@@ -50,10 +50,14 @@ class User
         if ($this->id != null) {
             global $pdo;
 
-            $sql = $pdo->prepare("SELECT * FROM `usuario` WHERE `id_usuario` = ?");
+            $sql = $pdo->prepare("SELECT * FROM `detalhes_conta` WHERE `idConta` = ?");
             $sql->execute(array($this->id));
 
             return $sql->fetchAll();
         }
+    }
+
+    public function ReturnID(){
+        echo "\n\nID: " . $this->id . "\n\n";
     }
 }

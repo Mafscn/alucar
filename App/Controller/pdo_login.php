@@ -26,6 +26,7 @@ if (isset($_POST['entrar'])) {
             $_SESSION['nome'] = $value['nome'];
             $_SESSION['cpf'] = $value['cpf'];
         }
+
         // Ao fim da comparação, é enviado a página index que realizará o controle (se usuário conseguiu logar com sucesso ou não)
         header('Location: ../View/page-aluguel.php');
     }else{
