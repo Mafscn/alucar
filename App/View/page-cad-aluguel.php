@@ -34,14 +34,14 @@
                 <div class="row">
                     <div class="col-sm col-6 align-right">
                         <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="Data de Saída">
-                            <input type="text" class="form-campo" placeholder="Horário de Saída">
+                            <input type="text" class="form-campo" placeholder="Data de Saída" onfocus="(this.type='date')" onblur="(this.type='text')">
+                            <input type="text" class="form-campo" placeholder="Horário de Saída" onfocus="(this.type='time')" onblur="(this.type='text')">
                         </form>
                     </div>
                     <div class="col-sm col-6 align-left">
                         <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="Data de Retorno">
-                            <input type="text" class="form-campo" placeholder="Horário de Retorno">
+                            <input type="text" class="form-campo" placeholder="Data de Retorno" onfocus="(this.type='date')" onblur="(this.type='text')">
+                            <input type="text" class="form-campo" placeholder="Horário de Retorno" onfocus="(this.type='time')" onblur="(this.type='text')">
                         </form>
                     </div>
                 </div>

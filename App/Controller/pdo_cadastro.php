@@ -12,11 +12,10 @@ if (isset($_POST['cadastrar'])) {
     $data = $_POST['nascimento'];
     $cpf = $_POST['cpf'];
     $senha = $_POST['password'];
-    $rand = rand(10000, 99999);
 
     $u = new User();
 
-    $u->Cadastrar($rand, $nome, $email, $data, $cpf, $senha);
+    $u->Cadastrar($nome, $email, $data, $cpf, $senha);
 
     header('Location: ../View/page-login.php');
 }

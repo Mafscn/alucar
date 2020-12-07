@@ -45,7 +45,7 @@
                             <input type="text" class="form-campo" placeholder="L. do Porta-Malas">
                             <input type="text" class="form-campo" placeholder="Quilometragem">
                             <input type="text" class="form-campo" placeholder="Autonomia">
-                            <input type="text" class="form-campo" placeholder="Data de Inspeção">
+                            <input type="text" class="form-campo" placeholder="Data de Inspeção" onblur="(this.type='text')" onfocus="(this.type='date')">
                             <input type="text" class="form-campo" placeholder="Banco">
                             <input type="text" class="form-campo" placeholder="Combustível">
                             <div style="height: 16px;"></div>

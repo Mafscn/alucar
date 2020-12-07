@@ -46,8 +46,8 @@ session_start();
             </table>
             <a href="page-alterar-dados.php" class="btn-bg" role="button">Alterar Dados</a>
             <a href="page-alterar-senha.php" class="btn-bg" role="button">Alterar Senha</a>
-            <form action="" method="POST">
-                <input type="submit" action="" method="POST" class="btn-bg btn-red" role="button" name="loggout" value="Sair da conta">
+            <form action="../Controller/loggout.php" method="POST">
+                <input type="submit" class="btn-bg btn-red" role="button" name="loggout" value="Sair da conta">
             </form>
         </div>
     </div>

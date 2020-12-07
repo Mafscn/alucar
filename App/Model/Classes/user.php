@@ -22,7 +22,7 @@ class User
         if ($sql->rowCount() == 1) {
 
             foreach ($userInfo as $key => $value) {
-                $this->id = $value['id_usuario'];
+                $this->id = $value['idConta'];
             }
 
             return true;
@@ -32,17 +32,17 @@ class User
     }
 
     // Método para cadastrar o novo usuário no banco de dados
-    public function Cadastrar($rand, $nome, $email, $data, $cpf, $senha)
+    public function Cadastrar($nome, $email, $data, $cpf, $senha)
     {
         global $pdo;
 
         $tipo = 1;
         
-        $sql = $pdo->prepare("INSERT INTO `detalhes_conta` (`id`, `idConta`, `nome`, `email`, `dataNasc`, `cpf`, `senha`) VALUES (NULL, ?, ?, ?, ?, ?, ?);");
-        $sql->execute(array($rand, $nome, $email, $data, $cpf, $senha));
+        $sql = $pdo->prepare("INSERT INTO `detalhes_conta` (`idConta`, `nome`, `email`, `dataNasc`, `cpf`, `senha`) VALUES (NULL, ?, ?, ?, ?, ?);");
+        $sql->execute(array( $nome, $email, $data, $cpf, $senha));
     
-        $sql = $pdo->prepare("INSERT INTO `conta` (`id`, `tipo`, `usuario`, `senha`) VALUES (?, ?, ?, ?);");
-        $sql->execute(array($rand, $tipo, $email, $senha));
+        $sql = $pdo->prepare("INSERT INTO `conta` (`id`, `tipo`, `usuario`, `senha`) VALUES (null, ?, ?, ?);");
+        $sql->execute(array($tipo, $email, $senha));
     }
 
     public function GetUserData()
