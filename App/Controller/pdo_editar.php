@@ -6,11 +6,11 @@ require "../Model/connection.php";
 require "../Model/Classes/user.php";
 
 global $pdo;
+$u = new User();
+$u->SetID($_SESSION['userid']);
 
 // Recebe todos os argumentos para realizar o cadastro do usuário
 if (isset($_POST['editar'])) {
-    $u = new User();
-    $u->SetID($_SESSION['userid']);
 
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -27,7 +27,27 @@ if (isset($_POST['editar'])) {
             $_SESSION['userid'] = $value['idConta'];
         }
         header("Location: ../View/page-conta.php");
+        die();
     } else {
         echo "Erro ao realizar alteração";
+    }
+}
+if(isset($_POST['editarSenha'])){
+
+    $oSenha = $_POST['oSenha'];
+    $nSenha1 = $_POST['nSenha1'];
+    $nSenha2 = $_POST['nSenha2'];
+
+    if($oSenha == $u->GetPassword() && $nSenha1 == $nSenha2){
+        $u->EditPassword($nSenha1);
+        echo "<script>
+        alert('Senha alterada com sucesso!');
+        window.location.replace('../View/page-conta.php');
+        </script>";
+    }else{
+        echo "<script>
+        alert('Senha incorreta!');
+        window.location.replace('../View/page-conta.php');
+        </script>";
     }
 }

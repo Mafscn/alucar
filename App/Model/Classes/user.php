@@ -15,7 +15,8 @@ class User
         $this->id = $x;
     }
 
-    public function GetID(){
+    public function GetID()
+    {
         return $this->id;
     }
 
@@ -80,7 +81,35 @@ class User
         return 1;
     }
 
-    public function Refresh(){
+    public function EditPassword($senha)
+    {
+
+        global $pdo;
+
+        $sql = $pdo->prepare("UPDATE `conta` SET `senha` = ? WHERE `id` = ?");
+        $sql->execute(array($senha, $this->id));
+
+        return 1;
+    }
+
+    public function GetPassword()
+    {
+
+        global $pdo;
+
+        $sql = $pdo->prepare("SELECT `senha` FROM `conta` WHERE `id` = ?");
+        $sql->execute(array($this->id));
+        $userInfo = $sql->fetchAll();
+
+        foreach($userInfo as $key => $value){
+            $password = $value['senha'];
+        }
+
+        return $password;
+    }
+
+    public function Refresh()
+    {
 
         global $pdo;
 

@@ -18,4 +18,5 @@ if (isset($_POST['cadastrar'])) {
     $u->Cadastrar($nome, $email, $data, $cpf, $senha);
 
     header('Location: ../View/page-login.php');
+    die();
 }

@@ -31,8 +31,10 @@ if (isset($_POST['entrar'])) {
 
         // Ao fim da comparação, é enviado a página index que realizará o controle (se usuário conseguiu logar com sucesso ou não)
         header('Location: ../View/page-aluguel.php');
+        die();
     }else{
         header('Location: ../View/page-login.php');
+        die();
     }
 
 }

@@ -26,12 +26,13 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <form autocomplete="off">
-                <input type="text" class="form-control form-campo" placeholder="Senha Atual">
-                <input type="text" class="form-control form-campo" placeholder="Nova Senha">
-                <input type="text" class="form-control form-campo" placeholder="Confirmar Nova Senha">
+            <form autocomplete="off" method="POST" action="../Controller/pdo_editar.php">
+                <input type="text" class="form-control form-campo" placeholder="Senha Atual" name="oSenha">
+                <input type="text" class="form-control form-campo" placeholder="Nova Senha" name="nSenha1">
+                <input type="text" class="form-control form-campo" placeholder="Confirmar Nova Senha" name="nSenha2">
+                <input type="submit" class="btn-bg" role="button" value="Confirmar" name="editarSenha"></input>
             </form>
-            <a href="page-conta.php" class="btn-bg" role="button">Confirmar</a>
+            
         </div>
     </div>
 </body>
