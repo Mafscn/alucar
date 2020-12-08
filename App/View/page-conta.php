@@ -37,7 +37,7 @@ session_start();
                 </tr>
                 <tr>
                     <th>Data de Nascimento</th>
-                    <td>"data"</td>
+                    <td><?php echo $_SESSION['dataNasc']; ?></td>
                 </tr>
                 <tr>
                     <th>CPF</th>

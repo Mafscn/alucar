@@ -30,20 +30,25 @@ session_start();
                     <div class="col-10">Alterar Dados</div><input class="btn-bg" type="submit" name="editar" value="Editar" onclick="(function(){
                         document.getElementById('nome').disabled = false;
                         document.getElementById('email').disabled = false;
-                        document.getElementById('nascimento').disabled = false;
+                        document.getElementById('dataNasc').disabled = false;
                         document.getElementById('cpf').disabled = false;
                         console.log('deu certo');
                     })()">
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <form autocomplete="off">
-                <input type="text" class="form-campo" value="<?php echo $_SESSION['nome']; ?>" id="nome" disabled>
-                <input type="text" class="form-campo" placeholder="E-mail" value="<?php echo $_SESSION['email']; ?>" id="email" disabled>
-                <input type="text" class="form-campo" placeholder="Data de nascimento" value="#emconstrução" id="nascimento" disabled style="color: red !important;">
-                <input type="text" class="form-campo" placeholder="CPF" value="<?php echo $_SESSION['cpf']; ?>" id="cpf" disabled>
+            <form autocomplete="off" method="POST" action="../Controller/pdo_editar.php">
+                <p style="font-size: large;">Nome de usuário</p>
+                <input type="text" class="form-campo" value="<?php echo $_SESSION['nome']; ?>" id="nome" name="nome" disabled>
+                <p style="font-size: large;">E-mail</p>
+                <input type="text" class="form-campo" placeholder="E-mail" value="<?php echo $_SESSION['email']; ?>" id="email" name="email" disabled>
+                <p style="font-size: large;">Data de nascimento</p>
+                <input type="date" class="form-campo" placeholder="Data de nascimento" value="<?php echo $_SESSION['dataNasc']; ?>" id="dataNasc" name="dataNasc" disabled>
+                <p style="font-size: large;">CPF</p>
+                <input type="text" class="form-campo" placeholder="CPF" value="<?php echo $_SESSION['cpf']; ?>" id="cpf" name="cpf" disabled>
+                <input type="submit" class="btn-bg" role="button" value="Confirmar" name="editar"></input>
             </form>
-            <a href="page-conta.php" class="btn-bg" role="button">Confirmar</a>
+            
         </div>
     </div>
 </body>
