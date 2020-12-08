@@ -28,43 +28,43 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <form action="" method="POST">
+            <form action="../Controller/pdo_editar.php" method="POST">
                 <div class="centralize">
 
                     <div class="header-campo">Nome</div>
-                    <input type="text" class="form-campo" placeholder="<?php echo $_SESSION['nomeFuncionario']; ?>">
+                    <input type="text" class="form-campo" value="<?php echo $_SESSION['nomeFuncionario']; ?>">
 
                     <div class="header-campo">E-mail</div>
-                    <input type="email" class="form-campo" placeholder="<?php echo $_SESSION['emailFuncionario']; ?>">
+                    <input type="email" class="form-campo" value="<?php echo $_SESSION['emailFuncionario']; ?>">
 
                     <div class="row">
                         <div class="col-sm col-6 align-right">
 
                             <div class="header-campo" style="transform: translateX(5%);">CPF</div>
-                            <input type="text" class="form-campo" placeholder="<?php echo $_SESSION['cpfFuncionario']; ?>">
+                            <input type="text" class="form-campo" value="<?php echo $_SESSION['cpfFuncionario']; ?>">
 
                             <div class="header-campo" style="transform: translateX(5%);">Data de Nascimento</div>
                             <input type="date" class="form-campo" value="<?php echo $_SESSION['dataFuncionario']; ?>">
 
                             <div class="header-campo" style="transform: translateX(5%);">Bairro</div>
-                            <input type="text" class="form-campo" placeholder="<?php echo $_SESSION['bairroFuncionario']; ?>">
+                            <input type="text" class="form-campo" value="<?php echo $_SESSION['bairroFuncionario']; ?>">
 
                         </div>
                         <div class="col-sm col-6 align-left">
 
                             <div class="header-campo" style="transform: translateX(-6%);">Logradouro</div>
-                            <input type="text" class="form-campo" placeholder="<?php echo $_SESSION['logradouroFuncionario']; ?>">
+                            <input type="text" class="form-campo" value="<?php echo $_SESSION['logradouroFuncionario']; ?>">
 
                             <div class="header-campo" style="transform: translateX(-6%);">Número</div>
-                            <input type="text" class="form-campo" placeholder="<?php echo $_SESSION['numeroFuncionario']; ?>">
+                            <input type="text" class="form-campo" value="<?php echo $_SESSION['numeroFuncionario']; ?>">
 
                             <div class="header-campo" style="transform: translateX(-6%);">Complemento</div>
-                            <input type="text" class="form-campo" placeholder="<?php echo $_SESSION['complementoFuncionario']; ?>">
+                            <input type="text" class="form-campo" value="<?php echo $_SESSION['complementoFuncionario']; ?>">
 
                         </div>
                     </div>
 
-                    <input type="submit" class="btn-bg" role="button" value="Confirmar">
+                    <input type="submit" class="btn-bg" role="button" value="Confirmar" name="">
 
                 </div>
             </form>

@@ -174,3 +174,27 @@ if(isset($_POST['telaFuncionario'])){
 
     header("location: ../View/page-ficha-funcionario.php");
 }
+
+if(isset($_POST['excluirFuncionario'])){
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+    global $pdo;
+
+    $sql = $pdo->prepare("DELETE FROM `detalhes_funcionario` WHERE `id` = ?");
+    $sql->execute(array($_SESSION['idFuncionario']));
+
+    header('Location: ../View/page-funcionario.php');
+}
+
+if(isset($_POST['excluirFuncionarioButton'])){
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+    $_SESSION['idFuncionario'] = $id;
+
+    global $pdo;
+
+    $sql = $pdo->prepare("DELETE FROM `detalhes_funcionario` WHERE `id` = ?");
+    $sql->execute(array($_SESSION['idFuncionario']));
+
+    header('Location: ../View/page-funcionario.php');
+}

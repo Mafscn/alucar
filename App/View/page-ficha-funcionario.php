@@ -59,9 +59,9 @@
                         <td><?php echo $_SESSION['complementoFuncionario']; ?></td>
                     </tr>
                 </table>
-                <form>
+                <form method="POST" action="../Controller/pdo_editar.php">
                     <a href="page-editar-funcionario.php" class="btn-bg" role="button">Editar</a>
-                    <a href="#" class="btn-bg btn-redw" role="button">Excluir</a>
+                    <input type="submit" class="btn-bg btn-redw" role="button" value="Excluir" name="excluirFuncionario"></input>
                 </form>
             </div>
         </div>
