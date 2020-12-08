@@ -41,7 +41,7 @@ session_start();
                 <p style="font-size: large;">Nome de usuário</p>
                 <input type="text" class="form-campo" value="<?php echo $_SESSION['nome']; ?>" id="nome" name="nome" disabled>
                 <p style="font-size: large;">E-mail</p>
-                <input type="text" class="form-campo" placeholder="E-mail" value="<?php echo $_SESSION['email']; ?>" id="email" name="email" disabled>
+                <input type="email" class="form-campo" placeholder="E-mail" value="<?php echo $_SESSION['email']; ?>" id="email" name="email" disabled>
                 <p style="font-size: large;">Data de nascimento</p>
                 <input type="date" class="form-campo" placeholder="Data de nascimento" value="<?php echo $_SESSION['dataNasc']; ?>" id="dataNasc" name="dataNasc" disabled>
                 <p style="font-size: large;">CPF</p>
