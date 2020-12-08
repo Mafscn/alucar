@@ -27,29 +27,23 @@
                 </div>
             </div>
             <div class="centralize">
-                <form autocomplete="off">
-                    <input type="text" class="form-campo" placeholder="Nome">
-                </form>
-                <div class="row">
-                    <div class="col-sm col-6 align-right">
-                        <form autocomplete="off">
-                            <input type="email" class="form-campo" placeholder="E-mail">
-                            <input type="text" class="form-campo" placeholder="CPF">
-                            <input type="text" class="form-campo" placeholder="CNH">
-                            <input type="text" class="form-campo" placeholder="Data de Nascimento">
-                        </form>
+                <form action="../controller/pdo_cadastro.php" method="post">
+                    <input type="text" class="form-campo" placeholder="Nome" name="nome">
+                    <div class="row">
+                        <div class="col-sm col-6 align-right">
+                            <input type="email" class="form-campo" placeholder="E-mail" name="email">
+                            <input type="text" class="form-campo" placeholder="CPF" name="cpf">
+                            <input type="text" class="form-campo" placeholder="CNH" name="cnh">
+                            <input type="date" class="form-campo" placeholder="Data de Nascimento" name="data">
+                        </div>
+                        <div class="col-sm col-6 align-left">
+                            <input type="text" class="form-campo" placeholder="Logradouro" name="logradouro">
+                            <input type="text" class="form-campo" placeholder="Bairro" name="bairro">
+                            <input type="text" class="form-campo" placeholder="Número" name="numero">
+                            <input type="text" class="form-campo" placeholder="Complemento" name="complemento">
+                        </div>
                     </div>
-                    <div class="col-sm col-6 align-left">
-                        <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="Logradouro">
-                            <input type="text" class="form-campo" placeholder="Bairro">
-                            <input type="text" class="form-campo" placeholder="Número">
-                            <input type="text" class="form-campo" placeholder="Complemento">
-                        </form>
-                    </div>
-                </div>
-                <form>
-                    <a href="page-clientes.php" class="btn-bg" role="button">Confirmar</a>
+                    <button class="btn-bg" style="border-style: none" name="cadastrar_cliente">Confirmar</button>
                 </form>
             </div>
         </div>

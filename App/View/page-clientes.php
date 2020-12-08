@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Clientes</title>
+    <style type="text/css">
+        input.id{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,27 +22,39 @@
             <div class="centralize">
                 <table class="tabela-menu">
                     <?php
-                    for($i = 0; $i < 15; $i++) {
-                        echo '
-                        <tr>
-                            <th>Fulano</th>
-                            <td>
-                                <a href="page-ficha-cliente.php">
-                                    <i class="material-icons" style="color: darkgoldenrod">edit</i>
-                                </a>
-                            </td>
-                            <td>
-                                <button class="btn-del">
-                                    <i class="material-icons" style="color: darkred">delete</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        ';
-                    };
+                    session_start();
+                    require "../Model/connection.php";
+
+                    global $pdo;
+
+                    $sql = $pdo->prepare("SELECT * FROM `detalhes_cliente`");
+                    $sql->execute();
+                    $name_bd = $sql->fetchAll();
+                    
+                        
+                        foreach($name_bd as $key => $value){
+                             echo '<form method="POST" action="../Controller/pdo_editar.php">
+                                <tr>
+                                    <th >'.$name = $value['nome'].'</th>
+                                    
+                                    <td>
+                                        <input type="hidden" name="id" value='.$id_cliente = $value['id'].'>
+                                        <button name="telaEditar"><i class="material-icons" style="color: darkgoldenrod">edit</i></button>
+                                    </td>
+                                    <td>
+                                        <input type="hidden" name="id" value='.$id_cliente = $value['id'].'>
+                                        <button class="btn-del" name="excluirClienteButton">
+                                            <i class="material-icons" style="color: darkred">delete</i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </form>';
+                        }   
                     ?>
+
                 </table>
             </div>
         </div>

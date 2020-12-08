@@ -11,7 +11,13 @@
 
 <body>
     <div class="row align-up">
-        <?php include('widgets/menu-bar.php'); ?>
+        <?php 
+
+        include('widgets/menu-bar.php'); 
+
+        session_start();
+
+        ?>
         <div class="col-sm col-9">
             <div class="container-cabecalho">
                 <div class="row">
@@ -30,40 +36,40 @@
                 <table class="tabela-ficha">
                     <tr>
                         <th>E-mail</th>
-                        <td>email</td>
+                        <td><?php echo $_SESSION['emailCliente']; ?></td>
                     </tr>
                     <tr>
                         <th>CPF</th>
-                        <td>cpf</td>
+                        <td><?php echo $_SESSION['cpfCliente']; ?></td>
                     </tr>
                     <tr>
                         <th>CNH</th>
-                        <td>cnh</td>
+                        <td><?php echo $_SESSION['cnhCliente']; ?></td>
                     </tr>
                     <tr>
                         <th>Data de Nascimento</th>
-                        <td>Data de Nascimento</td>
+                        <td><?php echo $_SESSION['dataCliente']; ?></td>
                     </tr>
                     <tr>
                         <th>Bairro</th>
-                        <td>bairro</td>
+                        <td><?php echo $_SESSION['bairroCliente']; ?></td>
                     </tr>
                     <tr>
                         <th>Logradouro</th>
-                        <td>logradouro</td>
+                        <td><?php echo $_SESSION['logradouroCliente']; ?></td>
                     </tr>
                     <tr>
                         <th>Número</th>
-                        <td>numero</td>
+                        <td><?php echo $_SESSION['numeroCliente']; ?></td>
                     </tr>
                     <tr>
                         <th>Complemento</th>
-                        <td>complemento</td>
+                        <td><?php echo $_SESSION['complementoCliente']; ?></td>
                     </tr>
                 </table>
-                <form>
+                <form action="../Controller/pdo_editar.php" method="post">
                     <a href="page-editar-cliente.php" class="btn-bg" role="button">Editar</a>
-                    <a href="#" class="btn-bg btn-red" role="button">Excluir</a>
+                    <input type="submit" name="excluirCliente" class="btn-bg btn-red" value="Excluir">
                 </form>
             </div>
         </div>
