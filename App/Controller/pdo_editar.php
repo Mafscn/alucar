@@ -147,3 +147,30 @@ if(isset($_POST['excluirClienteButton'])){
 
     header('Location: ../View/page-clientes.php');
 }
+
+if(isset($_POST['telaFuncionario'])){
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+    
+    global $pdo;
+
+    $sql = $pdo->prepare("SELECT * FROM `detalhes_funcionario` WHERE `id`='$id'");
+    $sql->execute();
+    $name_bd = $sql->fetchAll();
+
+    foreach($name_bd as $key => $value){
+        $_SESSION['idFuncionario'] = $id;
+        $_SESSION['nomeFuncionario'] = $value['nome'];
+        $_SESSION['emailFuncionario'] = $value['email'];
+        $_SESSION['cpfFuncionario'] = $value['cpf'];
+        $_SESSION['dataFuncionario'] = $value['data_nasc'];
+        $_SESSION['logradouroFuncionario'] = $value['logradouro'];
+        $_SESSION['bairroFuncionario'] = $value['bairro'];
+        $_SESSION['numeroFuncionario'] = $value['numero'];
+        $_SESSION['complementoFuncionario'] = $value['complemento'];
+    }
+
+      
+    //echo $name, $email, $cpf, $data, $logradouro, $bairro, $numero, $complemento;
+
+    header("location: ../View/page-ficha-funcionario.php");
+}

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require "../Model/connection.php";
 require "../Model/Classes/user.php";
@@ -32,11 +33,31 @@ if (isset($_POST['cadastrar_cliente'])) {
     $bairro = $_POST['bairro'];
     $numero = $_POST['numero'];
     $complemento = $_POST['complemento'];
+    $owner = $_SESSION['userid'];
     
     $u = new Client();
 
-    $u->Cadastrar($nome, $email, $data, $cpf, $cnh, $logradouro, $bairro, $numero, $complemento);
+    $u->Cadastrar($nome, $email, $data, $cpf, $cnh, $logradouro, $bairro, $numero, $complemento, $owner);
 
     header('Location: ../View/page-clientes.php');
+    die();
+}
+
+if (isset($_POST['cadastrar_funcionario'])) {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $data = $_POST['data'];
+    $cpf = $_POST['cpf'];
+    $logradouro = $_POST['logradouro'];
+    $bairro = $_POST['bairro'];
+    $numero = $_POST['numero'];
+    $complemento = $_POST['complemento'];
+    $owner = $_SESSION['userid'];
+    
+    $u = new Funcionario();
+
+    $u->Cadastrar($nome, $email, $data, $cpf, $logradouro, $bairro, $numero, $complemento, $owner);
+
+    header('Location: ../View/page-funcionario.php');
     die();
 }

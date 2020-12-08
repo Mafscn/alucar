@@ -16,27 +16,38 @@
             <a href="page-cad-funcionario.php" class="btn-bg" role="button">Cadastrar Funcionário</a>
             <div class="centralize">
                 <table class="tabela-menu">
-                    <?php
-                    for($i = 0; $i < 15; $i++) {
-                        echo '
-                        <tr>
-                            <th>Fulano</th>
-                            <td>
-                                <a href="page-ficha-funcionario.php">
-                                    <i class="material-icons" style="color: darkgoldenrod">edit</i>
-                                </a>
-                            </td>
-                            <td>
-                                <button class="btn-del">
-                                    <i class="material-icons" style="color: darkred">delete</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        ';
-                    };
+                <?php
+                    session_start();
+                    require "../Model/connection.php";
+
+                    global $pdo;
+
+                    $sql = $pdo->prepare("SELECT * FROM `detalhes_funcionario`");
+                    $sql->execute();
+                    $name_bd = $sql->fetchAll();
+                    
+                        
+                        foreach($name_bd as $key => $value){
+                             echo '<form method="POST" action="../Controller/pdo_editar.php">
+                                <tr>
+                                    <th >'.$name = $value['nome'].'</th>
+                                    
+                                    <td>
+                                        <input type="hidden" name="id" value='.$id_funcionario = $value['id'].'>
+                                        <button name="telaFuncionario"><i class="material-icons" style="color: darkgoldenrod">edit</i></button>
+                                    </td>
+                                    <td>
+                                        <input type="hidden" name="id" value='.$id_funcionario = $value['id'].'>
+                                        <button class="btn-del" name="excluirFuncionarioButton">
+                                            <i class="material-icons" style="color: darkred">delete</i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </form>';
+                        }   
                     ?>
                 </table>
             </div>

@@ -27,8 +27,8 @@
 
                     global $pdo;
 
-                    $sql = $pdo->prepare("SELECT * FROM `detalhes_cliente`");
-                    $sql->execute();
+                    $sql = $pdo->prepare("SELECT * FROM `detalhes_cliente` WHERE `owner` = ?");
+                    $sql->execute(array($_SESSION['userid']));
                     $name_bd = $sql->fetchAll();
                     
                         

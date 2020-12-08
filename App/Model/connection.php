@@ -2,8 +2,8 @@
 
 $localhost = "127.0.0.1";
 $user = "root";
-$password = "Conecta123%";
-$database = "alucar";
+$password = "";
+$database = "db_alucar";
 
 try {
     $pdo = new PDO("mysql:dbname=" . $database . "; host=" . $localhost, $user, $password);

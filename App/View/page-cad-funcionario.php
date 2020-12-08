@@ -26,31 +26,25 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div class="centralize">
-                <form autocomplete="off">
-                    <input type="text" class="form-campo" placeholder="Nome">
-                    <input type="email" class="form-campo" placeholder="E-mail">
-                </form>
-                <div class="row">
-                    <div class="col-sm col-6 align-right">
-                        <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="CPF">
-                            <input type="text" class="form-campo" placeholder="Data de Nascimento">
-                            <input type="text" class="form-campo" placeholder="Logradouro">
-                        </form>
-                    </div>
-                    <div class="col-sm col-6 align-left">
-                        <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="Bairro">
-                            <input type="text" class="form-campo" placeholder="Número">
-                            <input type="text" class="form-campo" placeholder="Complemento">
-                        </form>
+            <form autocomplete="off" method="POST" action="../Controller/pdo_cadastro.php">
+                <div class="centralize">
+                    <input type="text" class="form-campo" placeholder="Nome" name="nome">
+                    <input type="email" class="form-campo" placeholder="E-mail" name="email">
+                    <div class="row">
+                        <div class="col-sm col-6 align-right">
+                            <input type="text" class="form-campo" placeholder="CPF" name="cpf">
+                            <input type="date" class="form-campo" placeholder="Data de Nascimento" name="data">
+                            <input type="text" class="form-campo" placeholder="Logradouro" name="logradouro">
+                        </div>
+                        <div class="col-sm col-6 align-left">
+                            <input type="text" class="form-campo" placeholder="Bairro" name="bairro">
+                            <input type="text" class="form-campo" placeholder="Número" name="numero">
+                            <input type="text" class="form-campo" placeholder="Complemento" name="complemento">
+                        </div>
                     </div>
                 </div>
-                <form>
-                    <a href="page-clientes.php" class="btn-bg" role="button">Confirmar</a>
-                </form>
-            </div>
+                <input type="submit" class="btn-bg" role="button" value="Confirmar" name="cadastrar_funcionario"></input>
+            </form>
         </div>
     </div>
 </body>
