@@ -27,52 +27,46 @@
                 </div>
             </div>
             <div class="centralize">
-                <div class="row align-up">
-                    <div class="col-sm col-6 align-right">
-                        <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="Modelo">
-                            <input type="text" class="form-campo" placeholder="Placa">
-                            <input type="text" class="form-campo" placeholder="Cor">
-                            <input type="text" class="form-campo" placeholder="Marca">
-                            <input type="text" class="form-campo" placeholder="Ano">
-                            <input type="text" class="form-campo" placeholder="Câmbio">
-                            <input type="text" class="form-campo" placeholder="Ocupantes">
-                            <input type="text" class="form-campo" placeholder="Portas">
-                        </form>
-                    </div>
-                    <div class="col-sm col-6 align-left">
-                        <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="L. do Porta-Malas">
-                            <input type="text" class="form-campo" placeholder="Quilometragem">
-                            <input type="text" class="form-campo" placeholder="Autonomia">
-                            <input type="text" class="form-campo" placeholder="Data de Inspeção" onblur="(this.type='text')" onfocus="(this.type='date')">
-                            <input type="text" class="form-campo" placeholder="Banco">
-                            <input type="text" class="form-campo" placeholder="Combustível">
+                <form autocomplete="off" action="?act=create" method="POST" name="cadVeiculo">
+                    <div class="row align-up">
+                        <div class="col-sm col-6 align-right">
+                            <input type="text" name="model" class="form-campo" placeholder="Modelo">
+                            <input type="text" name="plaque" class="form-campo" placeholder="Placa">
+                            <input type="text" name="colour" class="form-campo" placeholder="Cor">
+                            <input type="text" name="brand" class="form-campo" placeholder="Marca">
+                            <input type="text" name="year" class="form-campo" placeholder="Ano">
+                            <input type="text" name="exchange" class="form-campo" placeholder="Câmbio">
+                            <input type="text" name="occupants" class="form-campo" placeholder="Ocupantes">
+                            <input type="text" name="door" class="form-campo" placeholder="Portas">
+                        </div>
+                        <div class="col-sm col-6 align-left">
+                            <input type="text" name="trunk" class="form-campo" placeholder="L. do Porta-Malas">
+                            <input type="text" name="km" class="form-campo" placeholder="Quilometragem">
+                            <input type="text" name="autonomy" class="form-campo" placeholder="Autonomia">
+                            <input type="text" name="inspection" class="form-campo" placeholder="Data de Inspeção" onblur="(this.type='text')" onfocus="(this.type='date')">
+                            <input type="text" name="bench" class="form-campo" placeholder="Banco">
+                            <input type="text" name="gas" class="form-campo" placeholder="Combustível">
                             <div style="height: 16px;"></div>
 
-                            <input type="checkbox" class="form-checkbox">
+                            <input type="checkbox"  name="air" class="form-checkbox">
                             <div class="side-header-campo">Ar-Condicionado</div>
                             <div style="height: 16px;"></div>
 
-                            <input type="checkbox" class="form-checkbox">
+                            <input type="checkbox" name="eletric-lock" class="form-checkbox">
                             <div class="side-header-campo">Trava Elétrica</div>
                             <div style="height: 16px;"></div>
 
-                            <input type="checkbox" class="form-checkbox">
+                            <input type="checkbox" name="hydraulic-steering" class="form-checkbox">
                             <div class="side-header-campo">Direção Hidráulica</div>
                             <div style="height: 16px;"></div>
 
-                            <input type="checkbox" class="form-checkbox">
+                            <input type="checkbox" name="airbag" class="form-checkbox">
                             <div class="side-header-campo">Airbag</div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-                <form>
-                    <a href="page-veiculos.php" class="btn-bg" role="button">Confirmar</a>
+                    <input type="submit" class="btn-bg" role="button" value="Confirmar">
                 </form>
-            </div>
         </div>
     </div>
 </body>
-
 </html>
