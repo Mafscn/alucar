@@ -33,16 +33,19 @@
                     foreach ($info as $key => $value) {
                         $nomeCliente = $c->SearchNameByID($value['idConta']);
                         echo '
+                        <form method="POST" action="../Controller/pdo_editar.php">
                         <tr>
-                            <th>'.$nomeCliente.'</th>
+                            <th>ID: ' . $value['id'] . '&nbsp &nbsp &nbsp &nbsp' . 'Cliente: '.$nomeCliente.'</th>
                             <td>'.$value['horarioFinal'].'</td>
                             <td>
-                                <a href="page-ficha-aluguel.php">
+                                <input type="hidden" name="id" value='.$id_aluguel = $value['id'].'>
+                                <button name="editarAluguel">
                                     <i class="material-icons" style="color: darkgoldenrod">edit</i>
-                                </a>
+                                </button>
                             </td>
                             <td>
-                                <button class="btn-del">
+                                <input type="hidden" name="id" value='.$id_aluguel = $value['id'].'>
+                                <button name="excluirAluguel" class="btn-del">
                                     <i class="material-icons" style="color: darkred">delete</i>
                                 </button>
                             </td>
@@ -50,6 +53,7 @@
                         <tr>
                             <td></td>
                         </tr>
+                        </form>
                         ';
                     };
                     ?>
