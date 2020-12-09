@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="centralize">
-                <form autocomplete="off" action="?act=create" method="POST" name="cadVeiculo">
+                <form autocomplete="off" action="../Controller/pdo_cadastro.php" method="POST" name="cadVeiculo">
                     <div class="row align-up">
                         <div class="col-sm col-6 align-right">
                             <input type="text" name="model" class="form-campo" placeholder="Modelo">
@@ -64,7 +64,7 @@
                             <div class="side-header-campo">Airbag</div>
                         </div>
                     </div>
-                    <input type="submit" class="btn-bg" role="button" value="Confirmar">
+                    <input type="submit" class="btn-bg" role="button" value="Confirmar" name="cadastrar_automovel">
                 </form>
         </div>
     </div>
