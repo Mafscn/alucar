@@ -268,3 +268,26 @@ if (isset($_POST['editarAluguel'])) {
 
     header("location: ../View/page-ficha-aluguel.php");
 }
+
+if(isset($_POST['editarAluguell'])){
+    $at = new Automovel();
+    $c = new Client();
+
+    $nome = $_POST['cliente'];
+    $veiculo = $_POST['veiculo'];
+    $hIni = $_POST['horarioInicialAluguel'];
+    $hFin = $_POST['horarioFinalAluguel'];
+
+    $idCarro = $at->SearchIDByName($veiculo);
+    $idConta = $c->SearchIDByName($nome);
+
+    $a = new Aluguel();
+    $a->EditClient($idCarro, $idConta, $hIni, $hFin);
+
+    $_SESSION['nomeContaAluguel'] = $nome;
+    $_SESSION['modeloCarroAluguel'] = $veiculo;
+    $_SESSION['horarioInicialAluguel'] = $hIni;
+    $_SESSION['horarioFinalAluguel'] = $hFin;
+
+    header("location: ../View/page-aluguel.php");
+}

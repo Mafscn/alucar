@@ -25,6 +25,16 @@ class Aluguel{
 
         return 1;
     }
+
+    public function EditClient($idCarro, $idConta, $hIni, $hFin)
+    {
+        global $pdo;
+
+        $sql = $pdo->prepare("UPDATE `aluguel` SET `idCarro` = ?, `idConta` = ?, `horarioInicial` = ?, `horarioFinal` = ? WHERE `id` = ?");
+        $sql->execute(array($idCarro, $idConta, $hIni, $hFin, $_SESSION['idAluguel']));
+
+        return 1;
+    }
 }
 
 ?>

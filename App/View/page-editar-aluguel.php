@@ -11,7 +11,7 @@
 
 <body>
     <div class="row align-up">
-        <?php include('widgets/menu-bar.php'); 
+        <?php include('widgets/menu-bar.php');
         session_start();
         ?>
         <div class="col-sm col-9">
@@ -28,24 +28,56 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <form action="">
+            <form action="../Controller/pdo_editar.php" method="POST">
                 <div class="centralize">
                     <div class="header-campo">Cliente</div>
-                    <input type="text" class="form-campo" value="<?php echo $_SESSION['nomeContaAluguel']; ?>">
+                    <select name="cliente" class="form-campo">
+                        <option selected><?php echo $_SESSION['nomeContaAluguel']; ?></option>
+                        <?php
+
+                        require_once "../Model/connection.php";
+
+                        global $pdo;
+
+                        $sql = $pdo->prepare("SELECT * FROM `detalhes_cliente` WHERE `owner` = ?");
+                        $sql->execute(array($_SESSION['userid']));
+                        $name_bd = $sql->fetchAll();
+
+                        foreach ($name_bd as $key => $value) {
+                            echo "<option>" . $value['nome'] . "</option>";
+                        }
+                        ?>
+                    </select>
 
                     <div class="header-campo">Veículo</div>
-                    <input type="email" class="form-campo" placeholder="Veículo">
+                    <select name="veiculo" class="form-campo">
+                        <option selected><?php echo $_SESSION['modeloCarroAluguel']; ?></option>
+                        <?php
+
+                        require_once "../Model/connection.php";
+
+                        global $pdo;
+
+                        $sql = $pdo->prepare("SELECT * FROM `veiculo` WHERE `owner` = ?");
+                        $sql->execute(array($_SESSION['userid']));
+                        $name_bd = $sql->fetchAll();
+
+                        foreach ($name_bd as $key => $value) {
+                            echo "<option>" . $value['modelo'] . "</option>";
+                        }
+                        ?>
+                    </select>
                     <div class="row">
                         <div class="col-sm col-6 align-right">
                             <div class="header-campo" style="transform: translateX(8%);">Data de Saída</div>
-                            <input type="text" class="form-campo" placeholder="Data de Saída">
+                            <input type="text" class="form-campo" value="<?php echo $_SESSION['horarioInicialAluguel']; ?>" name="horarioInicialAluguel">
                         </div>
                         <div class="col-sm col-6 align-left">
                             <div class="header-campo" style="transform: translateX(-8%);">Data de Retorno</div>
-                            <input type="text" class="form-campo" placeholder="Data de Retorno">
+                            <input type="text" class="form-campo" value="<?php echo $_SESSION['horarioFinalAluguel']; ?>" name="horarioFinalAluguel">
                         </div>
                     </div>
-                    <a href="page-aluguel.php" class="btn-bg" role="button">Confirmar</a>
+                    <input type="submit" name="editarAluguell" value="Confirmar" class="btn-bg">
                 </div>
             </form>
         </div>

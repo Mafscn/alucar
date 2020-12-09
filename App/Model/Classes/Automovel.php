@@ -83,4 +83,19 @@ class Automovel
 
         return $y;
     }
+
+    public function SearchPrecoByID($id){
+        global $pdo;
+
+        $sql = $pdo->prepare("SELECT `preco` FROM `veiculo` WHERE `id` = ?");
+        $sql->execute(array($id));
+        $info = $sql->fetchAll();
+        $y = null;
+
+        foreach ($info as $key => $value) {
+            $y = $value['preco'];
+        }
+
+        return $y;
+    }
 }

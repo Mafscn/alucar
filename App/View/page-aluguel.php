@@ -21,8 +21,10 @@
                     <?php
                     require "../Model/connection.php";
                     require "../Model/Classes/client.php";
+                    require "../Model/Classes/Automovel.php";
 
                     $c = new Client();
+                    $at = new Automovel();
 
                     global $pdo;
 
@@ -32,10 +34,11 @@
 
                     foreach ($info as $key => $value) {
                         $nomeCliente = $c->SearchNameByID($value['idConta']);
+                        $precoCarro = $at->SearchPrecoByID($value['idCarro']);
                         echo '
                         <form method="POST" action="../Controller/pdo_editar.php">
                         <tr>
-                            <th>ID: ' . $value['id'] . '&nbsp &nbsp &nbsp &nbsp' . 'Cliente: '.$nomeCliente.'</th>
+                            <th>ID: ' . $value['id'] . '&nbsp &nbsp &nbsp &nbsp' . 'Cliente: '.$nomeCliente. '&nbsp &nbsp &nbsp &nbsp' . 'Preço: R$' .  $precoCarro . '</th>
                             <td>'.$value['horarioFinal'].'</td>
                             <td>
                                 <input type="hidden" name="id" value='.$id_aluguel = $value['id'].'>
