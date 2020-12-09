@@ -28,8 +28,8 @@
                     
                         
                         foreach($name_bd as $key => $value){
-                        echo '
-                        <tr>
+                        echo '<form method="POST" action="../Controller/pdo_editar.php">
+                            <tr>
                             <th>'.$name = $value['modelo'].'</th>
                             <th>'.$name = $value['marca'].'</th>
                             <td>'.$placa= $value['placa'].'</td>
@@ -39,8 +39,8 @@
                                 </a>
                             </td>-->
                             <td>
-                            <input type="hidden" name="id" value='.$id_automovel = $value['id'].'>
-                            <button class="btn-del" name="excluirAutomovelButton">
+                                <input type="hidden" name="id" value='.$id_automovel = $value['id'].'>
+                                <button class="btn-del" name="excluirAutomovel">
                                     <i class="material-icons" style="color: darkred">delete</i>
                                 </button>
                             </td>
@@ -48,8 +48,8 @@
                         <tr>
                             <td></td>
                         </tr>
-                        ';
-                    };
+                        </form>';
+                    }   
                 ?>
                 </table>
             </div>
