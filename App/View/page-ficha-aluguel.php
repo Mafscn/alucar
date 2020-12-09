@@ -11,7 +11,9 @@
 
 <body>
     <div class="row align-up">
-        <?php include('widgets/menu-bar.php'); ?>
+        <?php include('widgets/menu-bar.php');
+        session_start();
+        ?>
         <div class="col-sm col-9">
             <div class="container-cabecalho">
                 <div class="row">
@@ -26,35 +28,35 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div class="centralize">
-                <table class="tabela-ficha">
-                    <tr>
-                        <th>Cliente</th>
-                        <td>"nome"</td>
-                    </tr>
-                    <tr>
-                        <th>Veículo</th>
-                        <td>"veiculo"</td>
-                    </tr>
-                    <tr>
-                        <th>Placa</th>
-                        <td>"numero"</td>
-                    </tr>
-                    <tr>
-                        <th>Saída</th>
-                        <td>"hora"</td>
-                    </tr>
-                    <tr>
-                        <th>Retorno</th>
-                        <td>"data"</td>
-                    </tr>
-                </table>
-                <form>
+            <form action="../Controller/pdo_editar.php" method="POST">
+                <div class="centralize">
+                    <table class="tabela-ficha">
+                        <tr>
+                            <th>ID Cliente</th>
+                            <td><?php echo $_SESSION['idContaAluguel']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Veículo</th>
+                            <td><?php echo $_SESSION['idCarroAluguel']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Placa</th>
+                            <td>"numero"</td>
+                        </tr>
+                        <tr>
+                            <th>Saída</th>
+                            <td><?php echo $_SESSION['horarioInicialAluguel']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Retorno</th>
+                            <td><?php echo $_SESSION['horarioFinalAluguel']; ?></td>
+                        </tr>
+                    </table>
                     <a href="page-editar-aluguel.php" class="btn-bg" role="button">Editar</a>
                     <a href="page-registrar-ocorrencia.php" class="btn-bg" role="button">Registrar Ocorrência</a>
-                    <a href="#" class="btn-bg btn-red" role="button">Excluir</a>
-                </form>
-            </div>
+                    <input type="submit" class="btn-bg btn-red" name="excluirAluguel" role="button" value="Excluir"></input>
+                </div>
+            </form>
         </div>
     </div>
 </body>
