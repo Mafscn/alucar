@@ -224,3 +224,38 @@ if (isset($_POST["editarFuncionario"])) {
 
     header('Location: ../View/page-ficha-funcionario.php');
 }
+
+if(isset($_POST['excluirAluguel'])){
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+    global $pdo;
+
+    $_SESSION['idAluguel'] = $id;
+
+    $sql = $pdo->prepare("DELETE FROM `aluguel` WHERE `id` = ?");
+    $sql->execute(array($_SESSION['idAluguel']));
+
+    header('Location: ../View/page-aluguel.php');
+    die();
+}
+
+if (isset($_POST['editarAluguel'])) {
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+    global $pdo;
+
+    $sql = $pdo->prepare("SELECT * FROM `aluguel` WHERE `id`= ?");
+    $sql->execute(array($id));
+    $name_bd = $sql->fetchAll();
+
+    foreach ($name_bd as $key => $value) {
+        $_SESSION['idAluguel'] = $id;
+        $_SESSION['idCarroAluguel'] = $value['idCarro'];
+        $_SESSION['idContaAluguel'] = $value['idConta'];
+        $_SESSION['horarioInicialAluguel'] = $value['horarioInicial'];
+        $_SESSION['horarioFinalAluguel'] = $value['horarioFinal'];
+        $_SESSION['ocorrenciaAluguel'] = $value['ocorrencia'];
+    }
+
+    header("location: ../View/page-ficha-aluguel.php");
+}
