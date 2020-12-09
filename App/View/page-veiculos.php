@@ -16,20 +16,31 @@
             <a href="page-cad-veiculo.php" class="btn-bg" role="button">Cadastrar Veículo</a>
             <div class="centralize">
                 <table class="tabela-menu">
-                    <?php
-                    for($i = 0; $i < 1; $i++) {
+                <?php
+                    session_start();
+                    require "../Model/connection.php";
+
+                    global $pdo;
+
+                    $sql = $pdo->prepare("SELECT * FROM `veiculo` WHERE `owner` = ?");
+                    $sql->execute(array($_SESSION['userid']));
+                    $name_bd = $sql->fetchAll();
+                    
+                        
+                        foreach($name_bd as $key => $value){
                         echo '
                         <tr>
-                            <th>"Carro"</th>
-                            <td>Ano</td>
-                            <td>Placa</td>
-                            <td>
+                            <th>'.$name = $value['modelo'].'</th>
+                            <th>'.$name = $value['marca'].'</th>
+                            <td>'.$placa= $value['placa'].'</td>
+                            <!--<td>
                                 <a href="page-ficha-veiculo.php">
                                     <i class="material-icons" style="color: darkgoldenrod">edit</i>
                                 </a>
-                            </td>
+                            </td>-->
                             <td>
-                                <button class="btn-del">
+                            <input type="hidden" name="id" value='.$id_automovel = $value['id'].'>
+                            <button class="btn-del" name="excluirAutomovelButton">
                                     <i class="material-icons" style="color: darkred">delete</i>
                                 </button>
                             </td>
