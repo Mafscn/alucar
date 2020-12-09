@@ -291,3 +291,14 @@ if(isset($_POST['editarAluguell'])){
 
     header("location: ../View/page-aluguel.php");
 }
+
+if (isset($_POST['excluirAutomovel'])) {
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+    global $pdo;
+    $_SESSION['idAutomovel'] = $id;
+    $sql = $pdo->prepare("DELETE FROM `veiculo` WHERE id = ?");
+    $sql->execute(array($_SESSION['idAutomovel']));
+
+    header('Location: ../View/page-veiculos.php');
+}
