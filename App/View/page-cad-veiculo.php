@@ -11,7 +11,8 @@
 
 <body>
     <div class="row align-up">
-        <?php include('widgets/menu-bar.php'); ?>
+        <?php include('widgets/menu-bar.php'); 
+              session_start();?>
         <div class="col-sm col-9">
             <div class="container-cabecalho">
                 <div class="row">
