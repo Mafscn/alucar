@@ -33,7 +33,7 @@
                     <select name="cliente" class="form-campo">
                         <?php
 
-                        require "../Model/connection.php";
+                        require_once "../Model/connection.php";
 
                         global $pdo;
 
@@ -46,7 +46,22 @@
                         }
                         ?>
                     </select>
-                    <input type="email" class="form-campo" placeholder="Veículo" name="veiculo">
+                    <select name="veiculo" class="form-campo">
+                        <?php
+
+                        require_once "../Model/connection.php";
+
+                        global $pdo;
+
+                        $sql = $pdo->prepare("SELECT * FROM `veiculo` WHERE `owner` = ?");
+                        $sql->execute(array($_SESSION['userid']));
+                        $name_bd = $sql->fetchAll();
+
+                        foreach ($name_bd as $key => $value) {
+                            echo "<option>" . $value['modelo'] . "</option>";
+                        }
+                        ?>
+                    </select>
                     <div class="row">
                         <div class="col-sm col-6 align-right">
                             <input type="text" class="form-campo" placeholder="Data de Saída" onfocus="(this.type='date')" onblur="(this.type='text')" name="dateSaida">

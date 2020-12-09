@@ -11,7 +11,9 @@
 
 <body>
     <div class="row align-up">
-        <?php include('widgets/menu-bar.php'); ?>
+        <?php include('widgets/menu-bar.php'); 
+        session_start();
+        ?>
         <div class="col-sm col-9">
             <div class="container-cabecalho">
                 <div class="row">
@@ -26,38 +28,26 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div class="centralize">
-                <form autocomplete="off">
+            <form action="">
+                <div class="centralize">
                     <div class="header-campo">Cliente</div>
-                    <input type="text" class="form-campo" placeholder="Cliente">
+                    <input type="text" class="form-campo" value="<?php echo $_SESSION['nomeContaAluguel']; ?>">
 
                     <div class="header-campo">Veículo</div>
                     <input type="email" class="form-campo" placeholder="Veículo">
-                </form>
-                <div class="row">
-                    <div class="col-sm col-6 align-right">
-                        <form autocomplete="off">
+                    <div class="row">
+                        <div class="col-sm col-6 align-right">
                             <div class="header-campo" style="transform: translateX(8%);">Data de Saída</div>
                             <input type="text" class="form-campo" placeholder="Data de Saída">
-
-                            <div class="header-campo" style="transform: translateX(8%);">Horário de Saída</div>
-                            <input type="text" class="form-campo" placeholder="Horário de Saída">
-                        </form>
-                    </div>
-                    <div class="col-sm col-6 align-left">
-                        <form autocomplete="off">
+                        </div>
+                        <div class="col-sm col-6 align-left">
                             <div class="header-campo" style="transform: translateX(-8%);">Data de Retorno</div>
                             <input type="text" class="form-campo" placeholder="Data de Retorno">
-
-                            <div class="header-campo" style="transform: translateX(-8%);">Cliente</div>
-                            <input type="text" class="form-campo" placeholder="Horário de Retorno">
-                        </form>
+                        </div>
                     </div>
-                </div>
-                <form>
                     <a href="page-aluguel.php" class="btn-bg" role="button">Confirmar</a>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>

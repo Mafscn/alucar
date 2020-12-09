@@ -32,16 +32,16 @@
                 <div class="centralize">
                     <table class="tabela-ficha">
                         <tr>
-                            <th>ID Cliente</th>
-                            <td><?php echo $_SESSION['idContaAluguel']; ?></td>
+                            <th>Cliente</th>
+                            <td><?php echo $_SESSION['nomeContaAluguel']; ?></td>
                         </tr>
                         <tr>
                             <th>Veículo</th>
-                            <td><?php echo $_SESSION['idCarroAluguel']; ?></td>
+                            <td><?php echo $_SESSION['modeloCarroAluguel']; ?></td>
                         </tr>
                         <tr>
                             <th>Placa</th>
-                            <td>"numero"</td>
+                            <td><?php echo $_SESSION['placaAluguel']; ?></td>
                         </tr>
                         <tr>
                             <th>Saída</th>
