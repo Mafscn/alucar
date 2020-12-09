@@ -4,6 +4,7 @@ session_start();
 require "../Model/connection.php";
 require "../Model/Classes/user.php";
 require "../Model/Classes/client.php";
+require "../Model/Classes/aluguel.php";
 
 global $pdo;
 
@@ -60,4 +61,17 @@ if (isset($_POST['cadastrar_funcionario'])) {
 
     header('Location: ../View/page-funcionario.php');
     die();
+}
+
+if(isset($_POST['cadastrarAluguel'])){
+    $dataSaida = $_POST['dateSaida'] . " " . $_POST['hourSaida'] . ":00";
+    $dataRetorno = $_POST['dateRetorno'] . " " . $_POST['hourRetorno'] . ":00";
+    $cliente = $_POST['cliente'];
+    $veiculo = $_POST['veiculo'];
+
+    $a = new Aluguel();
+
+    $a->Cadastrar($veiculo, $cliente, $dataSaida, $dataRetorno);
+    
+    header("Location: ../View/page-aluguel.php");
 }

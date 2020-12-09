@@ -39,6 +39,18 @@ class Client
 
         return 1;
     }
+
+    public function SearchIDByName($nome){
+        global $pdo;
+
+        $sql = $pdo->prepare("SELECT `id` FROM `detalhe_cliente` WHERE `nome` = ?");
+        $sql->execute(array($nome));
+        $x = $sql->fetchAll();
+
+        foreach($x as $key => $value){
+            
+        }
+    }
 }
 
 class Funcionario{
