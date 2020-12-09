@@ -5,6 +5,8 @@ session_start();
 require "../Model/connection.php";
 require "../Model/Classes/user.php";
 require "../Model/Classes/client.php";
+require "../Model/Classes/Automovel.php";
+require "../Model/Classes/aluguel.php";
 
 global $pdo;
 $u = new User();
@@ -256,6 +258,13 @@ if (isset($_POST['editarAluguel'])) {
         $_SESSION['horarioFinalAluguel'] = $value['horarioFinal'];
         $_SESSION['ocorrenciaAluguel'] = $value['ocorrencia'];
     }
+
+    $at = new Automovel();
+    $c = new Client();
+
+    $_SESSION['nomeContaAluguel'] = $c->SearchNameByID($_SESSION['idContaAluguel']);
+    $_SESSION['modeloCarroAluguel'] = $at->SearchNameByID($_SESSION['idCarroAluguel']);
+    $_SESSION['placaAluguel'] = $at->SearchPlacaByID($_SESSION['idCarroAluguel']);
 
     header("location: ../View/page-ficha-aluguel.php");
 }

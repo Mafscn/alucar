@@ -73,10 +73,12 @@ if(isset($_POST['cadastrarAluguel'])){
 
     $a = new Aluguel();
     $c = new Client();
+    $at = new Automovel();
 
     $clienteID = $c->SearchIDByName($cliente);
+    $veiculoID = $at->SearchIDByName($veiculo);
 
-    $a->Cadastrar($veiculo, $clienteID, $dataSaida, $dataRetorno, $owner);
+    $a->Cadastrar($veiculoID, $clienteID, $dataSaida, $dataRetorno, $owner);
     
     header("Location: ../View/page-aluguel.php");
 }
