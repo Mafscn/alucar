@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="centralize">
-                <form action="../controller/pdo_cadastro.php" method="post">
+                <form action="../Controller/pdo_cadastro.php" method="post">
                     <input type="text" class="form-campo" placeholder="Nome" name="nome">
                     <div class="row">
                         <div class="col-sm col-6 align-right">

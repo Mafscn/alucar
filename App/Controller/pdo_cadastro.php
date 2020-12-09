@@ -4,6 +4,7 @@ session_start();
 require "../Model/connection.php";
 require "../Model/Classes/user.php";
 require "../Model/Classes/client.php";
+require "../Model/Classes/Automovel.php";
 require "../Model/Classes/aluguel.php";
 
 global $pdo;
@@ -63,6 +64,33 @@ if (isset($_POST['cadastrar_funcionario'])) {
     die();
 }
 
+if (isset($_POST['cadastrar_automovel'])) {
+    $model = $_POST['model'];
+    $plaque = $_POST['plaque'];
+    $colour = $_POST['colour'];
+    $brand = $_POST['brand'];
+    $year = $_POST['year'];
+    $exchange = $_POST['exchange'];
+    $occupants = $_POST['occupants'];
+    $door = $_SESSION['door'];
+    $trunk = $_SESSION['trunk'];
+    $km = $_SESSION['km'];
+    $autonomy = $_SESSION['autonomy'];
+    $inspection = $_SESSION['inspection'];
+    $bench = $_SESSION['bench'];
+    $gas = $_SESSION['gas'];
+    $air= $_SESSION['air'];
+    $eletric = $_SESSION['eletric-lock'];
+    $hydraulic = $_SESSION['hydraulic-steering'];
+    $airbag = $_SESSION['airbag'];
+    
+    $auto = new Automovel();
+
+    $auto->create($model, $brand, $owner,$plaque,$year,$colour,$door,$trunk,$exchange,$occupants,$bench,$autonomy,$gas,$km,$airbag,$air,$hydraulic,$eletric);
+ 
+    header('Location: ../View/page-veiculos.php');
+    die();
+}
 if(isset($_POST['cadastrarAluguel'])){
     $dataSaida = $_POST['dateSaida'] . " " . $_POST['hourSaida'] . ":00";
     $dataRetorno = $_POST['dateRetorno'] . " " . $_POST['hourRetorno'] . ":00";
