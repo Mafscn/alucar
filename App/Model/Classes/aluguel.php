@@ -17,11 +17,11 @@ class Aluguel{
         return $this->id;
     }
 
-    public function Cadastrar($carro, $conta, $horI, $horF){
+    public function Cadastrar($carro, $conta, $horI, $horF, $owner){
         global $pdo;
 
-        $sql = $pdo->prepare("INSERT INTO `aluguel` (`idCarro`,`idConta`,`horarioInicial`,`horarioFinal`,`ocorrencia`) VALUES (?,?,?,?,0)");
-        $sql->execute(array($carro, $conta, $horI, $horF));
+        $sql = $pdo->prepare("INSERT INTO `aluguel` (`idCarro`,`idConta`,`horarioInicial`,`horarioFinal`,`ocorrencia`, `owner`) VALUES (?,?,?,?,0,?)");
+        $sql->execute(array($carro, $conta, $horI, $horF, $owner));
 
         return 1;
     }

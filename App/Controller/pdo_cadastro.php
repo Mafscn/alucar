@@ -68,10 +68,14 @@ if(isset($_POST['cadastrarAluguel'])){
     $dataRetorno = $_POST['dateRetorno'] . " " . $_POST['hourRetorno'] . ":00";
     $cliente = $_POST['cliente'];
     $veiculo = $_POST['veiculo'];
+    $owner = $_SESSION['userid'];
 
     $a = new Aluguel();
+    $c = new Client();
 
-    $a->Cadastrar($veiculo, $cliente, $dataSaida, $dataRetorno);
+    $clienteID = $c->SearchIDByName($cliente);
+
+    $a->Cadastrar($veiculo, $clienteID, $dataSaida, $dataRetorno, $owner);
     
     header("Location: ../View/page-aluguel.php");
 }

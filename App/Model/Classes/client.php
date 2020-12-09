@@ -43,13 +43,31 @@ class Client
     public function SearchIDByName($nome){
         global $pdo;
 
-        $sql = $pdo->prepare("SELECT `id` FROM `detalhe_cliente` WHERE `nome` = ?");
+        $sql = $pdo->prepare("SELECT `id` FROM `detalhes_cliente` WHERE `nome` = ?");
         $sql->execute(array($nome));
         $x = $sql->fetchAll();
+        $y = null;
 
         foreach($x as $key => $value){
-            
+            $y = $value['id'];
         }
+
+        return $y;
+    }
+
+    public function SearchNameByID($id){
+        global $pdo;
+
+        $sql = $pdo->prepare("SELECT `nome` FROM `detalhes_cliente` WHERE `id` = ?");
+        $sql->execute(array($id));
+        $info = $sql->fetchAll();
+        $y = null;
+
+        foreach($info as $key => $value){
+            $y = $value['nome'];
+        }
+
+        return $y;
     }
 }
 
