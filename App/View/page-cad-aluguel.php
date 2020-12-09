@@ -11,7 +11,9 @@
 
 <body>
     <div class="row align-up">
-        <?php include('widgets/menu-bar.php'); ?>
+        <?php include('widgets/menu-bar.php');
+        session_start();
+        ?>
         <div class="col-sm col-9">
             <div class="container-cabecalho">
                 <div class="row">
@@ -26,29 +28,38 @@
                     <div class="d-none col-1"></div>
                 </div>
             </div>
-            <div class="centralize">
-                <form autocomplete="off">
-                    <input type="text" class="form-campo" placeholder="Cliente">
-                    <input type="email" class="form-campo" placeholder="Veículo">
-                </form>
-                <div class="row">
-                    <div class="col-sm col-6 align-right">
-                        <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="Data de Saída" onfocus="(this.type='date')" onblur="(this.type='text')">
-                            <input type="text" class="form-campo" placeholder="Horário de Saída" onfocus="(this.type='time')" onblur="(this.type='text')">
-                        </form>
+            <form action="../Controller/pdo_cadastro.php" method="POST">
+                <div class="centralize">
+                    <select name="cliente" class="form-campo">
+                        <?php
+
+                        require "../Model/connection.php";
+
+                        global $pdo;
+
+                        $sql = $pdo->prepare("SELECT * FROM `detalhes_cliente` WHERE `owner` = ?");
+                        $sql->execute(array($_SESSION['userid']));
+                        $name_bd = $sql->fetchAll();
+
+                        foreach ($name_bd as $key => $value) {
+                            echo "<option>" . $value['nome'] . "</option>";
+                        }
+                        ?>
+                    </select>
+                    <input type="email" class="form-campo" placeholder="Veículo" name="veiculo">
+                    <div class="row">
+                        <div class="col-sm col-6 align-right">
+                            <input type="text" class="form-campo" placeholder="Data de Saída" onfocus="(this.type='date')" onblur="(this.type='text')" name="dateSaida">
+                            <input type="text" class="form-campo" placeholder="Horário de Saída" onfocus="(this.type='time')" onblur="(this.type='text')" name="hourSaida">
+                        </div>
+                        <div class="col-sm col-6 align-left">
+                            <input type="text" class="form-campo" placeholder="Data de Retorno" onfocus="(this.type='date')" onblur="(this.type='text')" name="dateRetorno">
+                            <input type="text" class="form-campo" placeholder="Horário de Retorno" onfocus="(this.type='time')" onblur="(this.type='text')" name="hourRetorno">
+                        </div>
                     </div>
-                    <div class="col-sm col-6 align-left">
-                        <form autocomplete="off">
-                            <input type="text" class="form-campo" placeholder="Data de Retorno" onfocus="(this.type='date')" onblur="(this.type='text')">
-                            <input type="text" class="form-campo" placeholder="Horário de Retorno" onfocus="(this.type='time')" onblur="(this.type='text')">
-                        </form>
-                    </div>
+                    <input type="submit" class="btn-bg" role="button" value="Confirmar" name="cadastrarAluguel">
                 </div>
-                <form>
-                    <a href="page-aluguel.php" class="btn-bg" role="button">Confirmar</a>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
 </body>

@@ -11,17 +11,31 @@
 
 <body>
     <div class="row align-up">
-        <?php include('widgets/menu-bar.php'); ?>
+        <?php include('widgets/menu-bar.php');
+        session_start();
+        ?>
         <div class="col-sm col-9">
             <a href="page-cad-aluguel.php" class="btn-bg" role="button">Cadastrar Aluguel</a>
             <div class="centralize">
                 <table class="tabela-menu">
                     <?php
-                    for($i = 0; $i < 15; $i++) {
+                    require "../Model/connection.php";
+                    require "../Model/Classes/client.php";
+
+                    $c = new Client();
+
+                    global $pdo;
+
+                    $sql = $pdo->prepare("SELECT * FROM `aluguel` WHERE `owner` = ?");
+                    $sql->execute(array($_SESSION['userid']));
+                    $info = $sql->fetchAll();
+
+                    foreach ($info as $key => $value) {
+                        $nomeCliente = $c->SearchNameByID($value['idConta']);
                         echo '
                         <tr>
-                            <th>Fulano</th>
-                            <td>00/00/0000</td>
+                            <th>'.$nomeCliente.'</th>
+                            <td>'.$value['horarioFinal'].'</td>
                             <td>
                                 <a href="page-ficha-aluguel.php">
                                     <i class="material-icons" style="color: darkgoldenrod">edit</i>

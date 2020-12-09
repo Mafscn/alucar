@@ -9,6 +9,7 @@ require "../Model/Classes/client.php";
 global $pdo;
 $u = new User();
 $c = new Client();
+$f = new Funcionario();
 $u->SetID($_SESSION['userid']);
 
 // Recebe todos os argumentos para realizar o cadastro do usuário
@@ -38,7 +39,7 @@ if (isset($_POST['editar'])) {
             window.location.replace('../View/page-conta.php');
             </script>";
         }
-    } else{
+    } else {
         echo "<script>
             alert('Você deve informar os dados corretamente!');
             window.location.replace('../View/page-conta.php');
@@ -70,16 +71,16 @@ if (isset($_POST['editarSenha'])) {
         </script>";
     }
 }
-if(isset($_POST['telaEditar'])){
+if (isset($_POST['telaEditar'])) {
     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
-    
+
     global $pdo;
 
     $sql = $pdo->prepare("SELECT * FROM `detalhes_cliente` WHERE `id`='$id'");
     $sql->execute();
     $name_bd = $sql->fetchAll();
 
-    foreach($name_bd as $key => $value){
+    foreach ($name_bd as $key => $value) {
         $_SESSION['idCliente'] = $id;
         $_SESSION['nomeCliente'] = $value['nome'];
         $_SESSION['emailCliente'] = $value['email'];
@@ -92,13 +93,13 @@ if(isset($_POST['telaEditar'])){
         $_SESSION['complementoCliente'] = $value['complemento'];
     }
 
-      
+
     //echo $name, $email, $cpf, $data, $logradouro, $bairro, $numero, $complemento;
 
     header("location: ../View/page-ficha-cliente.php");
 }
 
-if(isset($_POST["editarCliente"])){
+if (isset($_POST["editarCliente"])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $cpf = $_POST['cpf'];
@@ -124,7 +125,7 @@ if(isset($_POST["editarCliente"])){
     header('Location: ../View/page-ficha-cliente.php');
 }
 
-if(isset($_POST['excluirCliente'])){
+if (isset($_POST['excluirCliente'])) {
     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
     global $pdo;
@@ -135,7 +136,7 @@ if(isset($_POST['excluirCliente'])){
     header('Location: ../View/page-clientes.php');
 }
 
-if(isset($_POST['excluirClienteButton'])){
+if (isset($_POST['excluirClienteButton'])) {
     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
     $_SESSION['idCliente'] = $id;
@@ -148,16 +149,16 @@ if(isset($_POST['excluirClienteButton'])){
     header('Location: ../View/page-clientes.php');
 }
 
-if(isset($_POST['telaFuncionario'])){
+if (isset($_POST['telaFuncionario'])) {
     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
-    
+
     global $pdo;
 
     $sql = $pdo->prepare("SELECT * FROM `detalhes_funcionario` WHERE `id`='$id'");
     $sql->execute();
     $name_bd = $sql->fetchAll();
 
-    foreach($name_bd as $key => $value){
+    foreach ($name_bd as $key => $value) {
         $_SESSION['idFuncionario'] = $id;
         $_SESSION['nomeFuncionario'] = $value['nome'];
         $_SESSION['emailFuncionario'] = $value['email'];
@@ -169,8 +170,57 @@ if(isset($_POST['telaFuncionario'])){
         $_SESSION['complementoFuncionario'] = $value['complemento'];
     }
 
-      
+
     //echo $name, $email, $cpf, $data, $logradouro, $bairro, $numero, $complemento;
 
     header("location: ../View/page-ficha-funcionario.php");
+}
+
+if (isset($_POST['excluirFuncionario'])) {
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+    global $pdo;
+
+    $sql = $pdo->prepare("DELETE FROM `detalhes_funcionario` WHERE `id` = ?");
+    $sql->execute(array($_SESSION['idFuncionario']));
+
+    header('Location: ../View/page-funcionario.php');
+}
+
+if (isset($_POST['excluirFuncionarioButton'])) {
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+    $_SESSION['idFuncionario'] = $id;
+
+    global $pdo;
+
+    $sql = $pdo->prepare("DELETE FROM `detalhes_funcionario` WHERE `id` = ?");
+    $sql->execute(array($_SESSION['idFuncionario']));
+
+    header('Location: ../View/page-funcionario.php');
+}
+
+if (isset($_POST["editarFuncionario"])) {
+    $nome = $_POST['nomeF'];
+    $email = $_POST['emailF'];
+    $cpf = $_POST['cpfF'];
+    $data = $_POST['dataNascF'];
+    $bairro = $_POST['bairroF'];
+    $logradouro = $_POST['logradouroF'];
+    $numero = $_POST['numeroF'];
+    $complemento = $_POST['complementoF'];
+
+    $f->EditFuncionario($nome, $email, $cpf, $data, $logradouro, $bairro, $numero, $complemento);
+
+    $_SESSION['idFuncionario'] = $id;
+    $_SESSION['nomeFuncionario'] = $nome;
+    $_SESSION['emailFuncionario'] = $email;
+    $_SESSION['cpfFuncionario'] = $cpf;
+    $_SESSION['dataFuncionario'] = $data;
+    $_SESSION['logradouroFuncionario'] = $logradouro;
+    $_SESSION['bairroFuncionario'] = $bairro;
+    $_SESSION['numeroFuncionario'] = $numero;
+    $_SESSION['complementoFuncionario'] = $complemento;
+
+    header('Location: ../View/page-ficha-funcionario.php');
 }

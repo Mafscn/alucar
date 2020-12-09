@@ -4,7 +4,11 @@ session_start();
 require "../Model/connection.php";
 require "../Model/Classes/user.php";
 require "../Model/Classes/client.php";
+<<<<<<< HEAD
 require "../Model/Classes/Automovel.php";
+=======
+require "../Model/Classes/aluguel.php";
+>>>>>>> 3ade3b9577d47537e024665f0a6008dced302dbc
 
 global $pdo;
 
@@ -63,6 +67,7 @@ if (isset($_POST['cadastrar_funcionario'])) {
     die();
 }
 
+<<<<<<< HEAD
 if (isset($_POST['cadastrar_automovel'])) {
     $model = $_POST['model'];
     $plaque = $_POST['plaque'];
@@ -89,4 +94,21 @@ if (isset($_POST['cadastrar_automovel'])) {
  
     header('Location: ../View/page-veiculos.php');
     die();
+=======
+if(isset($_POST['cadastrarAluguel'])){
+    $dataSaida = $_POST['dateSaida'] . " " . $_POST['hourSaida'] . ":00";
+    $dataRetorno = $_POST['dateRetorno'] . " " . $_POST['hourRetorno'] . ":00";
+    $cliente = $_POST['cliente'];
+    $veiculo = $_POST['veiculo'];
+    $owner = $_SESSION['userid'];
+
+    $a = new Aluguel();
+    $c = new Client();
+
+    $clienteID = $c->SearchIDByName($cliente);
+
+    $a->Cadastrar($veiculo, $clienteID, $dataSaida, $dataRetorno, $owner);
+    
+    header("Location: ../View/page-aluguel.php");
+>>>>>>> 3ade3b9577d47537e024665f0a6008dced302dbc
 }

@@ -22,10 +22,9 @@
 
                     global $pdo;
 
-                    $sql = $pdo->prepare("SELECT * FROM `detalhes_funcionario`");
-                    $sql->execute();
+                    $sql = $pdo->prepare("SELECT * FROM `detalhes_funcionario` WHERE `owner` = ?");
+                    $sql->execute(array($_SESSION['userid']));
                     $name_bd = $sql->fetchAll();
-                    
                         
                         foreach($name_bd as $key => $value){
                              echo '<form method="POST" action="../Controller/pdo_editar.php">
